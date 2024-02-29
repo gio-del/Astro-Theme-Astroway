@@ -57,6 +57,16 @@ Update the values of these properties with your own personal information. You ca
 
 Once you have made the necessary changes, save the file and the portfolio template will reflect the updated personal data.
 
+## 🛠️ Tools Used
+
+This portfolio template uses the following tools/libraries/resources:
+
+- [Astro](https://astro.build/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Font Awesome](https://fontawesome.com/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+
 ## 🎨 Styling
 
 This portfolio template uses Tailwind CSS for styling. You can modify the colors used in the portfolio by updating the `tailwind.config.js` file located in the root of the project.
