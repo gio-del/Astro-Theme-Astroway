@@ -1,16 +1,7 @@
-# Astro Starter Kit: Basics
+# Astro Portfolio Template
 
-```sh
-npm create astro@latest -- --template basics
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/gio-del/Astro-Portfolio-Template)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/gio-del/Astro-Portfolio-Template)
 
 ## 🚀 Project Structure
 
@@ -22,19 +13,26 @@ Inside of your Astro project, you'll see the following folders and files:
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   ├── about_section/
+│   │   |   ├── About.tsx
+│   │   |   └── Education.tsx
+│   |   |   └── Experience.tsx
+│   │   ├── contact_section/
+│   │   |   └── Contact.tsx
+│   │   ├── project_section/
+|   |   |   ├── ProjectCard.tsx
+|   |   |   └── ProjectCarousel.tsx
+│   │   ├── Nav.jsx
+│   │   ├── ToggleDarkMode.jsx
+│   │   └── TopButton.jsx
+│   ├── data/
+│   |   └── info.ts
 │   ├── layouts/
-│   │   └── Layout.astro
+│   │   └── BaseLayout.astro
 │   └── pages/
 │       └── index.astro
 └── package.json
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
@@ -49,6 +47,32 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 💻 Personal Data
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+To modify the personal data shown in the portfolio template, you need to update the `info.ts` file located in the `data/` folder.
+
+Open the `info.ts` file, and you will find an object with properties representing different sections of your personal data, such as `name`, `title`, `about`, `education`, `experience`, and more.
+
+Update the values of these properties with your own personal information. You can also add or remove properties as needed.
+
+Once you have made the necessary changes, save the file and the portfolio template will reflect the updated personal data.
+
+## 🎨 Styling
+
+This portfolio template uses Tailwind CSS for styling. You can modify the colors used in the portfolio by updating the `tailwind.config.js` file located in the root of the project.
+
+## 🏗️ Contributing
+
+If you would like to contribute to the Astro Portfolio Template, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your forked repository.
+5. Submit a pull request to the main repository.
+
+Thank you for your contribution!
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
