@@ -25,7 +25,7 @@ export default function Experience(props: ExperienceProps) {
           </div>
 
           {index !== experience.length - 1 && (
-            <div className="absolute top-3 left-2.5 h-full w-1 bg-secondary dark:bg-dk-secondary"></div>
+            <div className="absolute top-3 left-2.5 h-full w-1 bg-secondary dark:bg-dk-secondary hover:bg-accent hover:dark:bg-dk-accent"></div>
           )}
         </div>
       ))}

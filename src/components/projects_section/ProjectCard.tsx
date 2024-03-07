@@ -16,7 +16,7 @@ export default function ProjectCard(props: ProjectCardProps) {
       <div className="flex-shrink-0">
         <img
           className="h-52 w-full object-cover"
-          src="https://images.unsplash.com/photo-1683009680116-b5c04463551d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src={project.img_path}
           alt="Project image"
         />
       </div>

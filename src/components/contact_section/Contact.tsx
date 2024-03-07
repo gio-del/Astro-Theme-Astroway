@@ -4,6 +4,7 @@ interface ContactProps {
   contact: (typeof info)["contact"];
 }
 
+// TODO: handle not providing all social media links
 export default function Contact(props: ContactProps) {
   const { contact } = props;
 
