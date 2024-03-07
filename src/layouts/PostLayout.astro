@@ -1,0 +1,19 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+const { frontmatter } = Astro.props;
+
+// TODO: improve the layout, add an optional image
+---
+
+<BaseLayout>
+  <article class="flex flex-col items-center justify-center h-screen">
+    <header>
+      <h1>{frontmatter.title}</h1>
+      <p>{frontmatter.date}</p>
+    </header>
+    <section>
+      <slot />
+    </section>
+  </article>
+</BaseLayout>
