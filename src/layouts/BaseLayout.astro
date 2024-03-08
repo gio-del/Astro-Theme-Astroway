@@ -3,6 +3,8 @@ import Nav from "../components/Nav";
 import TopButton from "../components/TopButton";
 
 const { title } = Astro.props;
+
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -46,49 +48,3 @@ const { title } = Astro.props;
     <TopButton client:only />
   </body>
 </html>
-<style is:global>
-  body {
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-
-  h1 {
-    margin: 0;
-    padding: 0;
-    color: theme(colors.secondary);
-  }
-
-  h2,
-  p {
-    color: theme(colors.text);
-  }
-  html.dark h1 {
-    color: theme(colors.dk-secondary);
-  }
-
-  html.dark h2,
-  html.dark p {
-    color: theme(colors.dk-text);
-  }
-
-  /* Smooth dark mode transition for all elements and some animations on transition */
-  * {
-    transition:
-      background-color 0.5s,
-      color 0.5s;
-    animation: fadeIn 0.5s;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-</style>

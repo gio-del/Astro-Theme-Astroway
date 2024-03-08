@@ -1,0 +1,15 @@
+---
+// Placeholder for the list of all the posts
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PostCard from "../components/post_section/PostCard";
+
+const allPosts = await Astro.glob("../pages/posts/*.md");
+
+const title = "Posts";
+---
+
+<BaseLayout title={title}>
+  <div class="container">
+    {allPosts.map((post) => <PostCard post={post} />)}
+  </div>
+</BaseLayout>
