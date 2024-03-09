@@ -1,7 +1,7 @@
 ---
 // Placeholder for the list of all the posts
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PostCard from "../components/post_section/PostCard";
+import Post from "../components/post_section/Post.astro";
 
 const allPosts = await Astro.glob("../pages/posts/*.md");
 
@@ -9,7 +9,7 @@ const title = "Posts";
 ---
 
 <BaseLayout title={title}>
-  <div class="container">
-    {allPosts.map((post) => <PostCard post={post} />)}
+  <div class="container w-full flex flex-col items-center justify-center mx-auto">
+    {allPosts.map((post) => <Post post={post} />)}
   </div>
 </BaseLayout>

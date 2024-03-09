@@ -3,9 +3,10 @@ title: "My Second Astro Post"
 date: "2022-01-01"
 
 layout: ../../layouts/PostLayout.astro
+description: "This is my second Astro post. Stay tuned for more exciting content coming soon!"
 ---
 
-# Welcome to my Astro Blog
+# Welcome to my Astro Blog!
 
 This is my second Astro post. Stay tuned for more exciting content coming soon!
 Irure non esse officia enim velit tempor quis. Non eu ut aliqua et ipsum reprehenderit esse deserunt ex in est. Excepteur ut cupidatat nostrud veniam dolor. Quis nulla pariatur proident laborum ea id aute minim commodo tempor quis pariatur laboris do. Ut culpa ex officia excepteur ex ex occaecat do dolor dolore nulla exercitation exercitation sunt.

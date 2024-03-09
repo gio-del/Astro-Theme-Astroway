@@ -42,9 +42,11 @@ import "../styles/global.css";
       }
     </script>
   </head>
-  <body class="bg-primary dark:bg-dk-primary">
+  <body class="bg-primary dark:bg-dk-primary w-full">
     <Nav client:only />
-    <slot />
+    <div class="container mx-auto px-4">
+      <slot />
+    </div>
     <TopButton client:only />
   </body>
 </html>
