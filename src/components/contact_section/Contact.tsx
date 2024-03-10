@@ -10,6 +10,7 @@ export default function Contact(props: ContactProps) {
 
   return (
     <div className="flex lg:space-x-28 space-x-10 justify-center items-center border-t-2 border-b-2 border-secondary dark:border-dk-secondary py-10 hover:border-accent dark:hover:border-dk-accent">
+      {/* TODO: refactor using map over an array of social media links */}
       <a
         href={`mailto:${contact.email}`}
         target="_blank"

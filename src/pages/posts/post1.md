@@ -13,9 +13,13 @@ img_path : "https://source.unsplash.com/random/800x600"
 This is my first Astro post. Stay tuned for more exciting content coming soon!
 Voluptate dolor aliquip ipsum aliquip velit cillum mollit aliqua veniam cillum sint enim ad amet. Lorem cillum consectetur esse sint. Cillum excepteur do enim nulla qui esse sint ipsum amet adipisicing do.
 
+## Section 1
+
 Commodo adipisicing et tempor laboris commodo enim consequat. Exercitation velit nulla excepteur eu qui minim in. Laborum occaecat occaecat irure occaecat labore et deserunt adipisicing exercitation.
 
 Duis est sint Lorem anim. Excepteur sunt magna sint exercitation aliqua adipisicing dolor dolore anim tempor Lorem enim dolore. Aliqua aliqua occaecat laborum culpa enim. Aliqua et ad consequat elit officia Lorem sunt voluptate adipisicing laborum velit adipisicing sunt. Sit cupidatat consequat velit eiusmod ut excepteur elit cillum irure pariatur sunt eu sunt dolor. Nisi eu est reprehenderit cillum magna eiusmod elit aliqua amet reprehenderit irure.
+
+## Section 2
 
 Reprehenderit tempor laborum enim adipisicing amet tempor et. Consectetur reprehenderit sit quis ea ad occaecat aliquip ipsum aliqua aliquip proident ullamco culpa. Eu eu enim proident deserunt irure do in commodo nostrud elit quis quis occaecat sit. Occaecat cupidatat cillum ex in nisi laborum ullamco cillum officia amet et. Aliquip enim exercitation sint ut in deserunt ut et laborum ex reprehenderit cillum do. Veniam veniam amet aute incididunt mollit ex cupidatat nulla.
 

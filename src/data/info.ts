@@ -3,6 +3,7 @@ export const info = {
   title: "Full Stack Developer",
   brief_description:
     "I'm a full stack developer with a passion for web development.",
+  role: "Full Stack Developer",
   picture: "/pic.jpg",
   location: "New York, USA",
 

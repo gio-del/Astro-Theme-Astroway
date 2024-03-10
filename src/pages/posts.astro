@@ -5,11 +5,26 @@ import Post from "../components/post_section/Post.astro";
 
 const allPosts = await Astro.glob("../pages/posts/*.md");
 
+// Reorder allPosts by date
+allPosts.sort((a, b) => {
+  const dateA = new Date(a.frontmatter.date);
+  const dateB = new Date(b.frontmatter.date);
+  return dateB.getTime() - dateA.getTime();
+});
+
 const title = "Posts";
 ---
 
 <BaseLayout title={title}>
-  <div class="container w-full flex flex-col items-center justify-center mx-auto">
-    {allPosts.map((post) => <Post post={post} />)}
+  <div
+    class="container w-full flex flex-col items-center justify-center mx-auto"
+  >
+    {
+      allPosts.map((post) => (
+        <div class="mb-4">
+          <Post post={post} />
+        </div>
+      ))
+    }
   </div>
 </BaseLayout>
