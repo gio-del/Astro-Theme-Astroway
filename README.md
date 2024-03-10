@@ -5,33 +5,48 @@
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+Inside of this portfolio template, you will find the following files and directories:
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   ├── about_section/
-│   │   |   ├── About.tsx
-│   │   |   └── Education.tsx
-│   |   |   └── Experience.tsx
-│   │   ├── contact_section/
-│   │   |   └── Contact.tsx
-│   │   ├── project_section/
-|   |   |   ├── ProjectCard.tsx
-|   |   |   └── ProjectCarousel.tsx
-│   │   ├── Nav.jsx
-│   │   ├── ToggleDarkMode.jsx
-│   │   └── TopButton.jsx
-│   ├── data/
-│   |   └── info.ts
-│   ├── layouts/
-│   │   └── BaseLayout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+├── astro.config.mjs
+├── package.json
+├── package-lock.json
+├── public
+│   ├── favicon.svg
+│   └── pic.jpg
+├── README.md
+├── src
+│   ├── components
+│   │   ├── about_section
+│   │   │   ├── About.tsx
+│   │   │   ├── Education.tsx
+│   │   │   └── Experience.tsx
+│   │   ├── contact_section
+│   │   │   └── Contact.tsx
+│   │   ├── Nav.jsx
+│   │   ├── post_section
+│   │   │   ├── Post.astro
+│   │   │   └── PostCarousel.tsx
+│   │   ├── projects_section
+│   │   │   ├── ProjectCard.tsx
+│   │   │   └── ProjectCarousel.tsx
+│   │   ├── ToggleDarkMode.jsx
+│   │   └── TopButton.jsx
+│   ├── data
+│   │   └── info.ts
+│   ├── env.d.ts
+│   ├── layouts
+│   │   ├── BaseLayout.astro
+│   │   └── PostLayout.astro
+│   ├── pages
+│   │   ├── index.astro
+│   │   ├── posts
+│   │   │   └── fake_post.md
+│   │   └── posts.astro
+│   └── styles
+│       └── global.css
+├── tailwind.config.mjs
+└── tsconfig.json
 ```
 
 ## 🧞 Commands
@@ -81,7 +96,7 @@ If you would like to contribute to the Astro Portfolio Template, follow these st
 4. Push your changes to your forked repository.
 5. Submit a pull request to the main repository.
 
-Thank you for your contribution!
+Thank you very much for your contributions!
 
 ## 📝 License
 

@@ -6,7 +6,6 @@ interface ContactProps {
   size: "md" | "lg";
 }
 
-// TODO: handle not providing all social media links
 export default function Contact(props: ContactProps) {
   const { contact } = props;
   const { size } = props;
