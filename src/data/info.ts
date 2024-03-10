@@ -129,10 +129,10 @@ export const info = {
   ],
 
   contact: {
-    email: "john.doe@fake.com",
-    linkedin: "https://www.linkedin.com/in/yourname",
-    github: "https://www.github.com/yourname",
-    twitter: "https://www.twitter.com/yourname",
-    // Add more social media links if you like, then update the Contact.tsx component
+    email: "john.doe@notsofake.com",
+    linkedin: "https://www.linkedin.com/in/veryfakenamethatisnotreal",
+    github: "https://www.github.com/veryfakenamethatisnotreal",
+    twitter: "https://www.twitter.com/veryfakenamethatisnotreal",
+    // Add or remove social media links, then update the Contact.tsx component accordingly
   },
 };
