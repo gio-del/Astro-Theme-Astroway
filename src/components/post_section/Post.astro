@@ -9,7 +9,7 @@ const { title, description, img_path, date } = post.frontmatter;
 
 <a
   href={url}
-  class="flex flex-col items-center rounded-lg shadow-md md:flex-row md:max-w-xl bg-primary outline outline-1 dark:outline-primary hover:outline-secondary dark:hover:outline-dk-secondary dark:bg-dk-primary"
+  class="flex flex-col items-center rounded-lg shadow-md md:flex-row md:max-w-xl bg-primary dark:bg-dk-primary"
 >
   {
     img_path && (
@@ -21,10 +21,12 @@ const { title, description, img_path, date } = post.frontmatter;
     )
   }
   <div class="p-4">
-    <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">
+    <h2 class="text-2xl font-bold">
       {title}
     </h2>
-    <p class="text-gray-600 dark:text-gray-400">{description}</p>
-    <p class="text-gray-500 dark:text-gray-300">{date}</p>
+    <p class="">{description}</p>
+    <p class="text-gray-500 dark:text-gray-500">{date}</p>
   </div>
 </a>
+<!-- Horizontal Line -->
+<div class="w-full h-0.5 my-4 bg-secondary dark:bg-dk-secondary"></div>
