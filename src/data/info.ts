@@ -6,6 +6,7 @@ export const info = {
   role: "Full Stack Developer",
   picture: "/pic.jpg",
   location: "New York, USA",
+  cv: "/Resume.pdf", // Make sure the file is in the public folder or modify the path/name
 
   about: {
     description: `I'm a full stack developer with a passion for web development.
