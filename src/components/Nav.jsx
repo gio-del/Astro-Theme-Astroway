@@ -3,7 +3,6 @@ import ToggleDarkMode from "./ToggleDarkMode";
 import { info } from "../data/info";
 
 export default function NavBar() {
-  // TODO: modify the navbar on large screens to be less marginally spaced (horizontal)
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const extractInitials = (name) => {
@@ -33,7 +32,7 @@ export default function NavBar() {
 
   return (
     <nav className="w-full top-0 inset-x-0 dark:bg-dk-primary bg-primary z-50">
-      <div className="container mx-auto px-6 py-2 flex justify-between items-center">
+      <div className="w-full px-6 py-2 flex justify-between items-center">
         <a className="font-bold text-2xl lg:text-4xl" href="/#">
           <span className="text-secondary dark:text-dk-secondary">
             {"</" + extractInitials(info.name) + ">"}
