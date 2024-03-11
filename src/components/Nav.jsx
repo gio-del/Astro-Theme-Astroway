@@ -76,6 +76,9 @@ export default function NavBar() {
             <li className="p-4 hover:text-accent dark:hover:text-dk-accent">
               <a href="/#contact">Contact</a>
             </li>
+            <li className="p-4 hover:text-accent dark:hover:text-dk-accent">
+              <a href="/#blog">Blog</a>
+            </li>
             <li className="px-4 flex">
               <ToggleDarkMode />
             </li>
@@ -102,6 +105,9 @@ export default function NavBar() {
           </li>
           <li className="p-4">
             <a href="/#contact">Contact</a>
+          </li>
+          <li className="p-4">
+            <a href="/#blog">Blog</a>
           </li>
           <li className="p-4">
             <ToggleDarkMode />

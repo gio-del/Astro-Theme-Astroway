@@ -1,0 +1,47 @@
+---
+const K = 2; // Number of recent posts to display
+
+const { posts } = Astro.props;
+
+const recentPosts = posts
+  .sort((a, b) => {
+    return (
+      new Date(b.frontmatter.date).getTime() -
+      new Date(a.frontmatter.date).getTime()
+    );
+  })
+  .slice(0, K);
+---
+
+<div class="flex flex-row justify-between">
+  <header>
+    <h1>Recent Posts from the Blog</h1>
+    <h2>A new post every week!</h2>
+  </header>
+  <div>
+    {
+      recentPosts.map(
+        (
+          post,
+          index // TODO: fix colors dark mode
+        ) => (
+          <div>
+            <h2>
+              <a href={post.url}>{post.frontmatter.title}</a>
+            </h2>
+            <h3>{post.frontmatter.description}</h3>
+            <p>{post.frontmatter.date}</p>
+            <a class="text-secondary dark:text-dk-secondary" href={post.url}>
+              Read more &rarr;
+            </a>
+            {/* Horizontal Line */}
+            <div class="border-t border-gray-200 dark:border-dk-gray-800 my-8" />
+          </div>
+        )
+      )
+    }
+    <div class="text-right mt-4 text-secondary dark:text-dk-secondary">
+      <a href="/posts">Read more posts</a>
+    </div>
+  </div>
+</div>

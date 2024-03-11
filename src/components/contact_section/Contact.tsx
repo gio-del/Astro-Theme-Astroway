@@ -23,7 +23,7 @@ export default function Contact(props: ContactProps) {
       className={
         "flex  justify-center items-center border-t-2 border-b-2 border-secondary dark:border-dk-secondary hover:border-accent dark:hover:border-dk-accent  " +
         (size === "md"
-          ? "lg:text-5xl text-4xl space-x-20 lg:space-x-10  py-2"
+          ? "lg:text-3xl text-4xl space-x-20 lg:space-x-16 py-2"
           : "lg:text-9xl text-5xl space-x-10 lg:space-x-28  py-10")
       }
     >
