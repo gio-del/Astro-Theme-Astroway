@@ -8,8 +8,6 @@ description: "This is my first Astro post. Stay tuned for more exciting content 
 img_path : "https://source.unsplash.com/random/?paper/800x600"
 ---
 
-# Welcome to my Astro Blog!
-
 This is my first Astro post. Stay tuned for more exciting content coming soon!
 Voluptate dolor aliquip ipsum aliquip velit cillum mollit aliqua veniam cillum sint enim ad amet. Lorem cillum consectetur esse sint. Cillum excepteur do enim nulla qui esse sint ipsum amet adipisicing do.
 

@@ -1,6 +1,4 @@
 ---
-// Given an astro post display it in a card format, nice and pretty
-
 const { post } = Astro.props;
 
 const { url } = post;
@@ -14,7 +12,7 @@ const { title, description, img_path, date } = post.frontmatter;
   {
     img_path && (
       <img
-        class="w-full h-64 rounded-t-lg md:w-64 md:h-auto md:rounded-l-lg"
+        class="w-full h-28 rounded-t-lg md:w-64 md:rounded-l-lg lg:object-fill object-cover"
         src={img_path}
         alt={title}
       />
@@ -24,7 +22,7 @@ const { title, description, img_path, date } = post.frontmatter;
     <h2 class="text-2xl font-bold">
       {title}
     </h2>
-    <p class="">{description}</p>
+    <p>{description}</p>
     <p class="text-gray-500 dark:text-gray-500">{date}</p>
   </div>
 </a>

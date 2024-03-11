@@ -7,12 +7,15 @@ import Contact from "../components/contact_section/Contact";
 const { frontmatter } = Astro.props;
 
 const { title, date, img_path } = frontmatter;
+// TODO: add tags here
 ---
 
 <BaseLayout>
   <main class="mt-10">
     <div class="mb-4 md:mb-0 w-full mx-auto relative">
-      <div class="flex flex-row relative z-10 justify-between">
+      <div
+        class="flex flex-row relative z-10 justify-between items-center mb-4"
+      >
         <div class="px-4 lg:px-0">
           <h1>
             {title}
@@ -31,16 +34,12 @@ const { title, date, img_path } = frontmatter;
         </p>
       </div>
 
-      <img
-        src={img_path}
-        class="w-full object-cover lg:rounded"
-        style="height: 28em;"
-      />
+      <img src={img_path} class="w-full object-cover lg:rounded lg:h-96 h-64" />
     </div>
 
     <div class="flex flex-col lg:flex-row lg:space-x-12 justify-center">
       <div
-        class="px-4 lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4"
+        class="px-4 lg:px-0 mt-12 text-text dark:text-dk-text text-lg leading-relaxed w-full lg:w-3/4"
       >
         <slot />
       </div>
