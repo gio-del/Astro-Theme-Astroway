@@ -28,6 +28,7 @@
 
 - [ ] Fuzzy search for posts
 - [ ] Post list pagination
+- [ ] RSS feed and sitemap
 - Feel free to open an issue or submit a pull request with your ideas for improving this portfolio template.
 
 ## 1.4. How do I modify my personal info?

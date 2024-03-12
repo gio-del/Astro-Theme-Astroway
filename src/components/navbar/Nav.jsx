@@ -10,8 +10,8 @@ export default function NavBar() {
   const navLinks = [
     { name: "About", href: "/#about" },
     { name: "Projects", href: "/#projects" },
-    { name: "Contact", href: "/#contact" },
     { name: "Blog", href: "/#blog" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   const extractInitials = (name) => {
@@ -55,7 +55,8 @@ export default function NavBar() {
           className="inline-flex items-center px-4 py-2 border-2 rounded text-secondary dark:text-dk-secondary border-secondary dark:border-dk-secondary appearance-none focus:outline-none hover:bg-secondary dark:hover:bg-dk-secondary hover:text-primary dark:hover:text-primary transition duration-300 ease-in-out cursor-pointer"
         >
           <i className="fas fa-download mr-2"></i>
-          <span>Download CV</span>
+          <span className="hidden lg:inline-block">Download CV</span>
+          <span className="lg:hidden">CV</span>
         </a>
 
         <div className="inline-flex lg:hidden text-secondary dark:text-dk-secondary">
