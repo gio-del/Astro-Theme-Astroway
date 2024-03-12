@@ -91,7 +91,7 @@ export const info = {
         "A personal portfolio website built with Next.js and TypeScript.",
       link: "https://www.github.com",
       tech: ["Next.js", "TypeScript"],
-      img_path: "/pic.jpg",
+      img_path: "https://source.unsplash.com/random/?portfolio", // Modify the path to your own image in the public folder
     },
     {
       title: "E-commerce Website",
@@ -100,7 +100,7 @@ export const info = {
         "An e-commerce website built with React, Node.js, and MongoDB.",
       link: "https://www.github.com",
       tech: ["React", "Node.js", "MongoDB"],
-      img_path: "/pic.jpg",
+      img_path: "https://source.unsplash.com/random/?ecommerce",
     },
     {
       title: "Blog Website",
@@ -108,7 +108,7 @@ export const info = {
       description: "A blog website built with Gatsby and GraphQL.",
       link: "https://www.github.com",
       tech: ["Gatsby", "GraphQL"],
-      img_path: "/pic.jpg",
+      img_path: "https://source.unsplash.com/random/?blog",
     },
     {
       title: "Social Media App",
@@ -116,7 +116,7 @@ export const info = {
       description: "A social media app built with React and Redux.",
       link: "https://www.github.com",
       tech: ["React", "Redux"],
-      img_path: "/pic.jpg",
+      img_path: "https://source.unsplash.com/random/?socialmedia",
     },
     {
       title: "Todo App",
@@ -124,7 +124,7 @@ export const info = {
       description: "A todo app built with Angular and Firebase.",
       link: "https://www.github.com",
       tech: ["Angular", "Firebase"],
-      img_path: "/pic.jpg",
+      img_path: "https://source.unsplash.com/random/?todo",
     },
   ],
 

@@ -1,85 +1,101 @@
-# Astro Portfolio Template
+# 1. Astro Portfolio Template
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/gio-del/Astro-Portfolio-Template)
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/gio-del/Astro-Portfolio-Template)
 
-## Table of Contents
+## 1.1. Table of Contents
 
-- [Astro Portfolio Template](#astro-portfolio-template)
-  - [Table of Contents](#table-of-contents)
-  - [1.1. Features :open\_hands:](#11-features-open_hands)
-  - [1.2. Personal Information :computer:](#12-personal-information-computer)
-  - [1.3. Project Structure :rocket:](#13-project-structure-rocket)
-  - [1.4. Commands :genie\_man:](#14-commands-genie_man)
-  - [1.5. Tools Used :hammer\_and\_wrench:](#15-tools-used-hammer_and_wrench)
-  - [1.6. Styling :art:](#16-styling-art)
-  - [1.7. Contributing :building\_construction:](#17-contributing-building_construction)
-  - [1.8. License :memo:](#18-license-memo)
+- [1. Astro Portfolio Template](#1-astro-portfolio-template)
+  - [1.1. Table of Contents](#11-table-of-contents)
+  - [1.2. Features :open\_hands:](#12-features-open_hands)
+  - [1.3. What's next?](#13-whats-next)
+  - [1.4. How do I modify my personal info?](#14-how-do-i-modify-my-personal-info)
+  - [1.5. Project Structure :rocket:](#15-project-structure-rocket)
+  - [1.6. Commands :genie\_man:](#16-commands-genie_man)
+  - [1.7. Tools Used :hammer\_and\_wrench:](#17-tools-used-hammer_and_wrench)
+  - [1.8. Styling :art:](#18-styling-art)
+  - [1.9. Contributing :building\_construction:](#19-contributing-building_construction)
+  - [1.10. License :memo:](#110-license-memo)
 
-## 1.1. Features :open_hands:
+## 1.2. Features :open_hands:
 
 - Fuzzy search for blog posts
 - Dark mode toggle
 - Responsive design
 - Easy to customize and extend personal data
 
-## 1.2. Personal Information :computer:
+## 1.3. What's next?
 
-To modify the personal data shown in the portfolio template, you need to update the `info.ts` file located in the `data/` folder.
+- [ ] Fuzzy search for posts
+- [ ] Post list pagination
+- Feel free to open an issue or submit a pull request with your ideas for improving this portfolio template.
 
-Open the `info.ts` file, and you will find an object with properties representing different sections of your personal data, such as `name`, `title`, `about`, `education`, `experience`, and more.
+## 1.4. How do I modify my personal info?
+
+To modify the personal data shown in the portfolio template, you need to update the [`info.ts`](src/data/info.ts) file located in the `src/data` directory.
+
+Open the `info.ts` file, and you will find an object with properties representing different sections of your portfolio, such as `name`, `title`, `about`, `education`, `experience`, and more.
 
 Update the values of these properties with your own personal information. You can also add or remove properties as needed.
 
 Once you have made the necessary changes, save the file and the portfolio template will reflect the updated personal data.
 
-## 1.3. Project Structure :rocket:
+## 1.5. Project Structure :rocket:
 
 Inside of this portfolio template, you will find the following files and directories:
 
 ```text
+.
 ├── astro.config.mjs
+├── LICENSE
 ├── package.json
 ├── package-lock.json
 ├── public
-│   ├── favicon.svg
-│   └── pic.jpg
+│   ├── favicon.svg
+│   ├── pic.jpg
+│   └── Resume.pdf
 ├── README.md
 ├── src
-│   ├── components
-│   │   ├── about_section
-│   │   │   ├── About.tsx
-│   │   │   ├── Education.tsx
-│   │   │   └── Experience.tsx
-│   │   ├── contact_section
-│   │   │   └── Contact.tsx
-│   │   ├── Nav.jsx
-│   │   ├── post_section
-│   │   │   ├── Post.astro
-│   │   │   └── PostCarousel.tsx
-│   │   ├── projects_section
-│   │   │   ├── ProjectCard.tsx
-│   │   │   └── ProjectCarousel.tsx
-│   │   ├── ToggleDarkMode.jsx
-│   │   └── TopButton.jsx
-│   ├── data
-│   │   └── info.ts
-│   ├── env.d.ts
-│   ├── layouts
-│   │   ├── BaseLayout.astro
-│   │   └── PostLayout.astro
-│   ├── pages
-│   │   ├── index.astro
-│   │   ├── posts
-│   │   │   └── fake_post.md
-│   │   └── posts.astro
-│   └── styles
-│       └── global.css
+│   ├── components
+│   │   ├── about_section
+│   │   │   ├── About.tsx
+│   │   │   ├── Education.tsx
+│   │   │   └── Experience.tsx
+│   │   ├── contact_section
+│   │   │   └── Contact.tsx
+│   │   ├── navbar
+│   │   │   ├── Hamburger.tsx
+│   │   │   └── Nav.jsx
+│   │   ├── post_section
+│   │   │   ├── Blog.astro
+│   │   │   └── Post.astro
+│   │   ├── projects_section
+│   │   │   ├── ProjectCard.tsx
+│   │   │   └── ProjectCarousel.tsx
+│   │   ├── search
+│   │   │   └── Search.tsx
+│   │   ├── ToggleDarkMode.jsx
+│   │   └── TopButton.jsx
+│   ├── data
+│   │   └── info.ts
+│   ├── env.d.ts
+│   ├── layouts
+│   │   ├── BaseLayout.astro
+│   │   └── PostLayout.astro
+│   ├── pages
+│   │   ├── index.astro
+│   │   ├── posts
+│   │   │   ├── heap_exploitation.md
+│   │   │   ├── post1.md
+│   │   │   └── post2.md
+│   │   └── posts.astro
+│   └── styles
+│       └── global.css
 ├── tailwind.config.mjs
 └── tsconfig.json
 ```
 
-## 1.4. Commands :genie_man:
+## 1.6. Commands :genie_man:
 
 All commands are run from the root of the project, from a terminal:
 
@@ -92,7 +108,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 1.5. Tools Used :hammer_and_wrench:
+## 1.7. Tools Used :hammer_and_wrench:
 
 This portfolio template uses the following tools/libraries/resources:
 
@@ -103,11 +119,11 @@ This portfolio template uses the following tools/libraries/resources:
 - [TypeScript](https://www.typescriptlang.org/)
 - [Fuse.js](https://fusejs.io/)
 
-## 1.6. Styling :art:
+## 1.8. Styling :art:
 
 This portfolio template uses Tailwind CSS for styling. You can modify the colors used in the portfolio by updating the `tailwind.config.js` file located in the root of the project.
 
-## 1.7. Contributing :building_construction:
+## 1.9. Contributing :building_construction:
 
 If you would like to contribute to the Astro Portfolio Template, follow these steps:
 
@@ -119,6 +135,6 @@ If you would like to contribute to the Astro Portfolio Template, follow these st
 
 Thank you very much for your contributions!
 
-## 1.8. License :memo:
+## 1.10. License :memo:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

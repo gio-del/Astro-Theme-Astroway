@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TODO: use tailwind extension class to refactor the whole styling of the portfolio */
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
