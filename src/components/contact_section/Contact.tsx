@@ -6,10 +6,7 @@ interface ContactProps {
   size: "md" | "lg";
 }
 
-export default function Contact(props: ContactProps) {
-  const { contact } = props;
-  const { size } = props;
-
+export default function Contact({ contact, size }: ContactProps) {
   const socialMediaLinks = [
     // Fix this if you add or remove social media links
     { name: "email", icon: "fas fa-envelope", link: `mailto:${contact.email}` },
