@@ -14,30 +14,22 @@ export default function ProjectCard(props: ProjectCardProps) {
   return (
     <div className="flex flex-col bg-primary dark:bg-dk-primary rounded-lg">
       <div className="flex-shrink-0">
-        <img
-          className="h-52 w-full object-cover"
-          src={project.img_path}
-          alt="Project image"
-        />
+        <a href={project.link} rel="noreferrer">
+          <img
+            className="h-52 w-full object-cover"
+            src={project.img_path}
+            alt="Project image"
+          />
+        </a>
       </div>
       <div className="flex-1 bg-primary dark:bg-dk-primary p-6 flex flex-col justify-between">
         <div className="flex-1">
           <p className="text-sm font-medium text-text dark:text-dk-text">
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noreferrer"
-              className="hover:underline"
-            >
+            <a href={project.link} rel="noreferrer" className="hover:underline">
               {project.title}
             </a>
           </p>
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noreferrer"
-            className="block mt-2"
-          >
+          <a href={project.link} rel="noreferrer" className="block mt-2">
             <p className="text-xl font-semibold text-gray-900">
               {project.description}
             </p>

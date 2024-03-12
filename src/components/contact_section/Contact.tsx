@@ -27,7 +27,6 @@ export default function Contact({ contact, size }: ContactProps) {
       {socialMediaLinks.map((link) => (
         <a
           href={link.link}
-          target="_blank"
           rel="noreferrer"
           key={link.name}
           className="text-secondary dark:text-dk-secondary"

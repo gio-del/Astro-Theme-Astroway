@@ -1,4 +1,5 @@
 // TODO: implement fuzzy search with Fuse.js
+// TODO: fix invisible width of search input
 
 import React, { useState } from "react";
 
