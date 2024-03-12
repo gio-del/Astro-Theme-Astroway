@@ -7,6 +7,13 @@ import { info } from "../../data/info";
 export default function NavBar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
+  const navLinks = [
+    { name: "About", href: "/#about" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Contact", href: "/#contact" },
+    { name: "Blog", href: "/#blog" },
+  ];
+
   const extractInitials = (name) => {
     const names = name.split(" ");
     let initials = "";
@@ -60,20 +67,14 @@ export default function NavBar() {
         </div>
         <div className="hidden lg:block">
           <ul className="inline-flex text-secondary dark:text-dk-secondary text-2xl font-normal">
-            <li className="p-4 hover:text-accent dark:hover:text-dk-accent">
-              {" "}
-              {/* TODO: refactor this to use a map */}
-              <a href="/#about">About</a>
-            </li>
-            <li className="p-4 hover:text-accent dark:hover:text-dk-accent">
-              <a href="/#projects">Projects</a>
-            </li>
-            <li className="p-4 hover:text-accent dark:hover:text-dk-accent">
-              <a href="/#contact">Contact</a>
-            </li>
-            <li className="p-4 hover:text-accent dark:hover:text-dk-accent">
-              <a href="/#blog">Blog</a>
-            </li>
+            {navLinks.map((link, index) => (
+              <li
+                key={index}
+                className="p-4 hover:text-accent dark:hover:text-dk-accent"
+              >
+                <a href={link.href}>{link.name}</a>
+              </li>
+            ))}
             <li className="px-4 flex">
               <ToggleDarkMode />
             </li>
@@ -95,20 +96,11 @@ export default function NavBar() {
           className="w-full text-secondary dark:text-dk-secondary text-xl font-semibold"
           onClick={() => setIsNavOpen(!isNavOpen)}
         >
-          <li className="p-4">
-            {" "}
-            {/* TODO: refactor this to use a map */}
-            <a href="/#about">About</a>
-          </li>
-          <li className="p-4">
-            <a href="/#projects">Projects</a>
-          </li>
-          <li className="p-4">
-            <a href="/#contact">Contact</a>
-          </li>
-          <li className="p-4">
-            <a href="/#blog">Blog</a>
-          </li>
+          {navLinks.map((link, index) => (
+            <li key={index} className="p-4">
+              <a href={link.href}>{link.name}</a>
+            </li>
+          ))}
           <li className="p-4">
             <ToggleDarkMode />
           </li>
