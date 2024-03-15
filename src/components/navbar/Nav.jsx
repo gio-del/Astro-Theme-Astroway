@@ -4,7 +4,7 @@ import Search from "../search/Search";
 import Hamburger from "./Hamburger";
 import { info } from "../../data/info";
 
-export default function NavBar() {
+export default function NavBar({ posts }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const navLinks = [
@@ -60,7 +60,7 @@ export default function NavBar() {
         </a>
 
         <div className="inline-flex lg:hidden text-secondary dark:text-dk-secondary">
-          <Search />
+          <Search posts={posts} />
           <Hamburger
             onClick={() => setIsNavOpen(!isNavOpen)}
             isNavOpen={isNavOpen}
@@ -80,7 +80,7 @@ export default function NavBar() {
               <ToggleDarkMode />
             </li>
             <li className="px-4 flex">
-              <Search />
+              <Search posts={posts} />
             </li>
           </ul>
         </div>

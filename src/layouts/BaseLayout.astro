@@ -1,8 +1,9 @@
 ---
-import Nav from "../components/navbar/Nav";
+import NavBar from "../components/navbar/Nav";
 import TopButton from "../components/TopButton";
 
 const { title } = Astro.props;
+const posts = await Astro.glob("../pages/posts/*.md");
 
 import "../styles/global.css";
 ---
@@ -43,7 +44,7 @@ import "../styles/global.css";
     </script>
   </head>
   <body class="bg-primary dark:bg-dk-primary w-full">
-    <Nav client:only />
+    <NavBar client:only posts={posts} />
     <div class="container mx-auto px-4">
       <slot />
     </div>
