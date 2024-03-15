@@ -19,15 +19,15 @@
 
 ## 1.2. Features :open_hands:
 
-- Fuzzy search for blog posts
 - Dark mode toggle
 - Responsive design
 - Easy to customize and extend personal data
+- Fuzzy search for blog posts
 
 ## 1.3. What's next?
 
-- [ ] Fuzzy search for posts
 - [ ] Post list pagination
+- [ ] Internationalization (i18n)
 - [ ] RSS feed and sitemap
 - Feel free to open an issue or submit a pull request with your ideas for improving this portfolio template.
 
