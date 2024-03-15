@@ -60,7 +60,6 @@ export default function NavBar({ posts }) {
         </a>
 
         <div className="inline-flex lg:hidden text-secondary dark:text-dk-secondary">
-          <Search posts={posts} />
           <Hamburger
             onClick={() => setIsNavOpen(!isNavOpen)}
             isNavOpen={isNavOpen}
@@ -90,7 +89,7 @@ export default function NavBar({ posts }) {
           !isNavOpen
             ? "hidden"
             : "" +
-              "h-full flex flex-col items-center text-center lg:hidden dark:text-tertiary"
+              " h-full flex flex-col items-center text-center lg:hidden dark:text-tertiary"
         }
       >
         <ul
@@ -104,6 +103,9 @@ export default function NavBar({ posts }) {
           ))}
           <li className="p-4">
             <ToggleDarkMode />
+          </li>
+          <li className="p-4">
+            <Search posts={posts} />
           </li>
         </ul>
       </div>
