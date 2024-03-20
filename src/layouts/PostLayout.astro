@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 import BaseLayout from "./BaseLayout.astro";
 
 import { info } from "../data/info";
@@ -6,11 +8,11 @@ import Contact from "../components/contact_section/Contact";
 
 const { frontmatter } = Astro.props;
 
-const { title, date, img_path } = frontmatter;
+const { title, date, img_path, img_alt } = frontmatter;
 // TODO: add tags here
 ---
 
-<BaseLayout>
+<BaseLayout title={title}>
   <main class="mt-10">
     <div class="mb-4 md:mb-0 w-full mx-auto relative">
       <div class="flex flex-row relative justify-between items-center mb-4">
@@ -31,8 +33,17 @@ const { title, date, img_path } = frontmatter;
           <a href="/posts" class="hover:underline">Back to posts</a>
         </p>
       </div>
-
-      <img src={img_path} class="w-full object-cover lg:rounded lg:h-96 h-64" />
+      {
+        img_path && (
+          <Image
+            src={img_path}
+            alt={img_alt || title}
+            class="w-full object-cover lg:rounded lg:h-96 h-64"
+            width={800}
+            height={400}
+          />
+        )
+      }
     </div>
 
     <div class="flex flex-col lg:flex-row lg:space-x-12 justify-center">
@@ -45,9 +56,12 @@ const { title, date, img_path } = frontmatter;
       <div class="w-full lg:w-1/4 m-auto mt-12 max-w-screen-sm">
         <div class="p-4 border-t border-b md:border md:rounded">
           <div class="flex py-2">
-            <img
+            <Image
               src={info.picture}
+              alt={info.picture_alt}
               class="h-10 w-10 rounded-full mr-2 object-cover"
+              height={40}
+              width={40}
             />
             <div>
               <p class="font-semibold text-gray-700 text-sm">{info.name}</p>

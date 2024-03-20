@@ -6,6 +6,7 @@ layout: ../../layouts/PostLayout.astro
 description: "Learn how to exploit buffer overflows in this post!"
 
 img_path : "https://source.unsplash.com/random/?overflow/800x600"
+img_alt : "Insert image description here"
 ---
 
 ## Fancy way to exploit the buffer

@@ -23,7 +23,6 @@ export default function NavBar({ posts }) {
     return initials;
   };
 
-  // Handle click outside of the navigation to close the nav if it's open
   useEffect(() => {
     const handleClick = (e) => {
       if (isNavOpen) {

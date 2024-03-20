@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 const { post } = Astro.props;
 
 const { url } = post;
@@ -7,17 +9,23 @@ const { title, description, img_path, date } = post.frontmatter;
 
 <a
   href={url}
-  class="flex flex-col items-center rounded-lg shadow-md md:flex-row md:max-w-xl bg-primary dark:bg-dk-primary"
+  class="flex flex-col items-center rounded-lg shadow-md md:flex-row bg-primary dark:bg-dk-primary"
 >
-  {
-    img_path && (
-      <img
-        class="w-full h-28 rounded-t-lg md:w-64 md:rounded-l-lg lg:object-fill object-cover"
-        src={img_path}
-        alt={title}
-      />
-    )
-  }
+  <div class="w-full">
+    {/* TODO: fix this (and parent) */}
+    {
+      img_path && (
+        <Image
+          class="w-full h-28 rounded-t-lg md:w-64 md:rounded-l-lg"
+          src={img_path}
+          alt={title}
+          width={300}
+          height={200}
+        />
+      )
+    }
+  </div>
+
   <div class="p-4">
     <h2 class="text-2xl font-bold">
       {title}

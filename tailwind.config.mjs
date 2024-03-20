@@ -5,7 +5,7 @@ export default {
 		extend: {
 			colors: {
 				'primary': '#F8F8F8',
-				'secondary': '#0C9E52',
+				'secondary': '#095F33',
 				'accent': '#101010',
 				'text': '#101010',
 				'dk-primary': '#101010',

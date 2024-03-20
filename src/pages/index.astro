@@ -6,10 +6,8 @@ import Contact from "../components/contact_section/Contact";
 import About from "../components/about_section/About";
 import Blog from "../components/post_section/Blog.astro";
 
-// This is the home page, it will contain three sections that on large screens will be full height (whole screen)
-// These sections will be: the hero (my name, title, brief description and a picture), the projects section (carousel scrolling through my projects) and the contact section (a form to send me an email, with a message and a subject field, and a button to send the email)
-// We use tailwindcss for styling, react for the interactivity and astro for the static site generation
-// When you have to define a new React Component just put there the name of the component and the props it will receive, I will implement it later
+import { Image } from "astro:assets";
+
 const allPosts = await Astro.glob("./posts/*.md");
 ---
 
@@ -32,16 +30,19 @@ const allPosts = await Astro.glob("./posts/*.md");
           >
         </h2>
       </div>
-      <img
-        class="lg:h-96 lg:w-96 h-40 w-40 rounded-full object-cover object-center space-x-8"
+      <Image
         src={info.picture}
-        alt="A picture of me"
+        alt="Profile Picture"
+        width={200}
+        height={200}
+        class="lg:h-96 lg:w-96 h-40 w-40 rounded-full object-cover object-center space-x-8"
       />
     </div>
   </section>
-
-  <section class="lg:m-0 my-20 mx-2" id="about">
-    <About about={info.about} client:only />
+  <section class="lg:m-0
+        my-20
+        mx-2" id="about">
+    <About about={info.about} client:visible />
   </section>
 
   <section

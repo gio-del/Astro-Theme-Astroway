@@ -10,6 +10,7 @@ export default function Hamburger({ onClick, isNavOpen }: HamburgerProps) {
     <button
       className="flex items-center justify-center px-3 py-2 border-2 rounded border-secondary dark:border-dk-secondary appearance-none focus:outline-none"
       onClick={onClick}
+      aria-label="Open Navigation Menu"
     >
       <i
         className={

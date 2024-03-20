@@ -13,7 +13,7 @@ const recentPosts = posts
   .slice(0, K);
 ---
 
-<div class="flex flex-row justify-between">
+<div class="flex flex-row justify-evenly">
   <header class="mb-8">
     <h1 class="mb-2">Recent Posts from the Blog</h1>
     <h2 class="mb-4">A new post every week!</h2>
@@ -32,7 +32,6 @@ const recentPosts = posts
           <a class="text-secondary dark:text-dk-secondary" href={post.url}>
             Read more &rarr;
           </a>
-          {/* Horizontal Line */}
           <div class="border-t border-gray-200 dark:border-dk-gray-800 my-8" />
         </div>
       ))

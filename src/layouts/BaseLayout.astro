@@ -44,7 +44,7 @@ import "../styles/global.css";
     </script>
   </head>
   <body class="bg-primary dark:bg-dk-primary w-full">
-    <NavBar client:only posts={posts} />
+    <NavBar client:visible posts={posts} />
     <div class="container mx-auto px-4">
       <slot />
     </div>

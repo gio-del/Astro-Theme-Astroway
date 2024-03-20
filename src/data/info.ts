@@ -4,6 +4,7 @@ export const info = {
     "I'm a full stack developer with a passion for web development.",
   role: "Full Stack Developer",
   picture: "/pic.jpg",
+  picture_alt: "American Dad",
   location: "New York, USA",
   cv: "/Resume.pdf", // Make sure the file is in the public folder or modify the path/name
 
@@ -91,6 +92,7 @@ export const info = {
         "A personal portfolio website built with Next.js and TypeScript.",
       link: "https://www.github.com",
       tech: ["Next.js", "TypeScript"],
+      img_alt: "Insert alt text here", // Add an alt text for the image
       img_path: "https://source.unsplash.com/random/?portfolio", // Modify the path to your own image in the public folder
     },
     {
@@ -100,6 +102,7 @@ export const info = {
         "An e-commerce website built with React, Node.js, and MongoDB.",
       link: "https://www.github.com",
       tech: ["React", "Node.js", "MongoDB"],
+      img_alt: "Insert alt text here",
       img_path: "https://source.unsplash.com/random/?ecommerce",
     },
     {
@@ -108,6 +111,7 @@ export const info = {
       description: "A blog website built with Gatsby and GraphQL.",
       link: "https://www.github.com",
       tech: ["Gatsby", "GraphQL"],
+      img_alt: "Insert alt text here",
       img_path: "https://source.unsplash.com/random/?blog",
     },
     {
@@ -116,6 +120,7 @@ export const info = {
       description: "A social media app built with React and Redux.",
       link: "https://www.github.com",
       tech: ["React", "Redux"],
+      img_alt: "Insert alt text here",
       img_path: "https://source.unsplash.com/random/?socialmedia",
     },
     {
@@ -124,6 +129,7 @@ export const info = {
       description: "A todo app built with Angular and Firebase.",
       link: "https://www.github.com",
       tech: ["Angular", "Firebase"],
+      img_alt: "Insert alt text here",
       img_path: "https://source.unsplash.com/random/?todo",
     },
   ],

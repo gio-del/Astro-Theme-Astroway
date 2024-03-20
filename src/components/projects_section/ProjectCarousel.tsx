@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
@@ -6,7 +7,6 @@ import "slick-carousel/slick/slick-theme.css";
 import ProjectCard from "./ProjectCard";
 import { info } from "../../data/info";
 
-// Interface for the props
 interface ProjectCarouselProps {
   projects: (typeof info)["projects"];
 }
@@ -23,6 +23,7 @@ function CustomArrow(props: any) {
       <button
         onClick={onClick}
         className="w-8 h-8 rounded-full flex justify-center items-center"
+        aria-label={left ? "Previous Slide" : "Next Slide"}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -47,11 +48,31 @@ function CustomArrow(props: any) {
 }
 
 export default function ProjectCarousel(props: ProjectCarouselProps) {
-  // projects is an array of objects with the following structure: {title: string, date: string, description: string, link: string}
   const { projects } = props;
+  const initialMount = React.useRef(true);
+
+  // useEffect triggered whenever the component updates
+  useEffect(() => {
+    if (initialMount.current) {
+      initialMount.current = false;
+      return;
+    } else hideAriaHiddenTiles();
+  });
+
+  // used to fix an accessibility issue, see https://github.com/akiran/react-slick/issues/1535#issuecomment-752017018 for more info
+  const hideAriaHiddenTiles = () => {
+    Array.from(document.querySelectorAll(".slick-slide")).forEach(
+      (slide: HTMLElement) => {
+        slide.style.visibility = slide.classList?.contains("slick-active")
+          ? "visible"
+          : "hidden";
+      }
+    );
+  };
 
   var settings = {
-    dots: false,
+    afterChange: () => hideAriaHiddenTiles(),
+    dots: true,
     infinite: true,
     speed: 1000,
     lazyLoad: true,

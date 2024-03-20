@@ -28,6 +28,7 @@ export default function TopButton() {
         isTop ? "hidden" : ""
       }`}
       onClick={handleTop}
+      aria-label="Scroll to top"
     >
       <i className="fas fa-arrow-up text-3xl lg:text-5xl"></i>
     </button>

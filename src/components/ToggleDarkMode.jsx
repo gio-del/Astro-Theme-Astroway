@@ -1,4 +1,25 @@
+import { useEffect, useState } from "react";
+
 export default function DarkModeUtility() {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem("theme");
+    if (localTheme) setTheme(localTheme);
+    else if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    )
+      setTheme("dark");
+    else setTheme("light");
+  }, []);
+
+  useEffect(() => {
+    const element = document.documentElement;
+    if (theme === "dark") element.classList.add("dark");
+    else element.classList.remove("dark");
+  }, [theme]);
+
   const handleThemeMode = () => {
     const element = document.documentElement;
     element.classList.toggle("dark");
@@ -17,10 +38,16 @@ export default function DarkModeUtility() {
         secure: true,
       });
     window.dispatchEvent(new Event("storage"));
+    setTheme(window.localStorage.getItem("theme"));
   };
 
   return (
-    <button className="self-center" onClick={handleThemeMode}>
+    <button
+      className="self-center"
+      onClick={handleThemeMode}
+      alt={`Change theme to ${theme === "dark" ? "light" : "dark"} mode`}
+      aria-label="Toggle dark mode"
+    >
       <span className="dark:hidden">
         <svg
           className="fill-secondary hover:fill-accent stroke-2"

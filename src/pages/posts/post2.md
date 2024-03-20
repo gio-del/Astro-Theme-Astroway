@@ -6,6 +6,7 @@ layout: ../../layouts/PostLayout.astro
 description: "This is my second Astro post. Stay tuned for more exciting content coming soon!"
 
 img_path : "https://source.unsplash.com/random/?second/800x600"
+img_alt: "Insert image description here"
 ---
 
 This is my second Astro post. Stay tuned for more exciting content coming soon!
