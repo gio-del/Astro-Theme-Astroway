@@ -15,7 +15,9 @@ const { title, date, img_path, img_alt } = frontmatter;
 <BaseLayout title={title}>
   <main class="mt-10">
     <div class="mb-4 md:mb-0 w-full mx-auto relative">
-      <div class="flex flex-row relative justify-between items-center mb-4">
+      <div
+        class="flex lg:flex-row flex-col relative justify-between items-center mb-4"
+      >
         <div class="px-4 lg:px-0">
           <h1>
             {title}
@@ -28,8 +30,10 @@ const { title, date, img_path, img_alt } = frontmatter;
         </a> -->
         </div>
 
-        <p class="text-sm lg:text-base px-4 lg:px-0">
-          {date}
+        <p
+          class="text-sm lg:text-base px-4 lg:px-0 flex lg:flex-row flex-col items-center justify-between gap-2"
+        >
+          <span>{date}</span>
           <a href="/posts" class="hover:underline">Back to posts</a>
         </p>
       </div>
@@ -50,7 +54,9 @@ const { title, date, img_path, img_alt } = frontmatter;
       <div
         class="px-4 lg:px-0 mt-12 text-text dark:text-dk-text text-lg leading-relaxed w-full lg:w-3/4"
       >
-        <slot />
+        <div class="*:mb-8 last:[mb-0 important!] leading-relaxed">
+          <slot />
+        </div>
       </div>
 
       <div class="w-full lg:w-1/4 m-auto mt-12 max-w-screen-sm">

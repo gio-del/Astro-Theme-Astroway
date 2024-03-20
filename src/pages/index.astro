@@ -32,7 +32,7 @@ const allPosts = await Astro.glob("./posts/*.md");
       </div>
       <Image
         src={info.picture}
-        alt="Profile Picture"
+        alt={info.picture_alt}
         width={200}
         height={200}
         class="lg:h-96 lg:w-96 h-40 w-40 rounded-full object-cover object-center space-x-8"

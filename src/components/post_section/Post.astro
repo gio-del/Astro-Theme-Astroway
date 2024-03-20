@@ -4,35 +4,51 @@ import { Image } from "astro:assets";
 const { post } = Astro.props;
 
 const { url } = post;
-const { title, description, img_path, date } = post.frontmatter;
+const { title, description, img_path, img_alt, date } = post.frontmatter;
 ---
 
-<a
-  href={url}
-  class="flex flex-col items-center rounded-lg shadow-md md:flex-row bg-primary dark:bg-dk-primary"
+<div
+  class="relative bg-primary rounded-lg shadow-sm dark:shadow-dk-secondary dark:bg-dk-primary transform transition duration-500 hover:scale-105"
 >
-  <div class="w-full">
-    {/* TODO: fix this (and parent) */}
+  <div class="p-2 flex justify-center">
     {
       img_path && (
-        <Image
-          class="w-full h-28 rounded-t-lg md:w-64 md:rounded-l-lg"
-          src={img_path}
-          alt={title}
-          width={300}
-          height={200}
-        />
+        <a href={url}>
+          <Image
+            class="rounded-md w-full md:h-48 h-28 object-cover"
+            src={img_path}
+            alt={img_alt || title}
+            width={300}
+            height={200}
+          />
+        </a>
       )
     }
   </div>
 
-  <div class="p-4">
-    <h2 class="text-2xl font-bold">
-      {title}
-    </h2>
-    <p>{description}</p>
-    <p class="text-gray-500 dark:text-gray-500">{date}</p>
+  <div class="px-4 pb-3 md:h-40 h-36">
+    <div>
+      <a href={url}>
+        <h5
+          class="text-xl font-semibold tracking-tight hover:text-secondary dark:hover:text-dk-secondary text-text dark:text-dk-text"
+        >
+          {title}
+        </h5>
+      </a>
+
+      <p class="antialiased text-text dark:text-dk-text text-sm break-all">
+        {description}
+      </p>
+      <div class="flex items-center justify-between mt-4">
+        <div class="flex items-center flex-row justify-between w-full">
+          <a
+            href={url}
+            class="text-sm font-semibold text-text dark:text-dk-text hover:underline"
+            >Read more</a
+          >
+          <p class="text-sm text-gray-600 dark:text-gray-400">{date}</p>
+        </div>
+      </div>
+    </div>
   </div>
-</a>
-<!-- Horizontal Line -->
-<div class="w-full h-0.5 my-4 bg-secondary dark:bg-dk-secondary"></div>
+</div>

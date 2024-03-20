@@ -42,10 +42,19 @@ html.dark p {
   color: theme(colors.dk-text);
 }
 
-/* Smooth dark mode transition for all elements and some animations on transition */
 * {
-  transition: background-color 0.5s, color 0.5s;
-  animation: fadeIn 0.5s;
+  transition: background-color 0.75s,
+    color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: fadeIn 0.75s;
+  -webkit-animation: fadeIn 0.75s;
+  -webkit-transition: background-color 0.75s,
+    color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -moz-transition: background-color 0.75s,
+    color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -ms-transition: background-color 0.75s,
+    color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: background-color 0.75s,
+    color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 @keyframes fadeIn {

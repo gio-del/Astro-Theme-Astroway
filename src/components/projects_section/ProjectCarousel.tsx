@@ -51,27 +51,7 @@ export default function ProjectCarousel(props: ProjectCarouselProps) {
   const { projects } = props;
   const initialMount = React.useRef(true);
 
-  // useEffect triggered whenever the component updates
-  useEffect(() => {
-    if (initialMount.current) {
-      initialMount.current = false;
-      return;
-    } else hideAriaHiddenTiles();
-  });
-
-  // used to fix an accessibility issue, see https://github.com/akiran/react-slick/issues/1535#issuecomment-752017018 for more info
-  const hideAriaHiddenTiles = () => {
-    Array.from(document.querySelectorAll(".slick-slide")).forEach(
-      (slide: HTMLElement) => {
-        slide.style.visibility = slide.classList?.contains("slick-active")
-          ? "visible"
-          : "hidden";
-      }
-    );
-  };
-
   var settings = {
-    afterChange: () => hideAriaHiddenTiles(),
     dots: true,
     infinite: true,
     speed: 1000,

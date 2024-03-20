@@ -26,7 +26,7 @@ export default function Search({ posts }: any) {
         isOpen={search}
         onRequestClose={() => setSearch(false)}
         contentLabel="Search"
-        className="relative mx-auto my-auto top-1/2 transform -translate-y-1/2 w-5/6 h-1/2 lg:w-1/2 bg-primary dark:bg-dk-primary rounded-2xl p-4 flex flex-col"
+        className="relative mx-auto my-auto top-1/2 transform -translate-y-1/2 w-5/6 h-1/2 lg:w-1/2 bg-primary dark:bg-dk-primary rounded-2xl p-4 flex flex-col border-2 border-secondary dark:border-dk-secondary"
         overlayClassName="fixed top-0 left-0 right-0 bottom-0 backdrop-filter backdrop-blur-sm z-50"
       >
         <div className="relative">
