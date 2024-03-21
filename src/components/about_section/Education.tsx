@@ -17,7 +17,7 @@ export default function Education(props: EducationProps) {
         <div className="flex flex-col space-y-2 relative" key={index}>
           <div className="flex items-center space-x-2">
             <i className="fas fa-graduation-cap text-2xl text-secondary dark:text-dk-secondary dark:hover:text-dk-accent hover:text-accent z-10"></i>
-            <h2 className="text-2xl font-semibold">{edu.title}</h2>
+            <h2 className="text-xl font-semibold">{edu.title}</h2>
           </div>
           <div className="relative left-10">
             <p className="text-xl font-normal">{edu.date}</p>

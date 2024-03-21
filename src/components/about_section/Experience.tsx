@@ -16,7 +16,7 @@ export default function Experience(props: ExperienceProps) {
         <div className="flex flex-col space-y-2 relative" key={index}>
           <div className="flex items-center space-x-2">
             <i className="fas fa-briefcase text-2xl text-secondary dark:text-dk-secondary dark:hover:text-dk-accent hover:text-accent z-10"></i>
-            <h2 className="text-2xl font-semibold">{exp.title}</h2>
+            <h2 className="text-xl font-semibold">{exp.title}</h2>
           </div>
           <div className="relative left-10">
             <p className="text-xl font-normal">{exp.date}</p>

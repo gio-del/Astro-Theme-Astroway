@@ -13,6 +13,13 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  scrollbar-color: theme(colors.secondary) theme(colors.primary);
+}
+
+html.dark * {
+  scrollbar-color: theme(colors.dk-secondary) theme(colors.dk-primary) !important;
+}
 h1 {
   margin: 0;
   padding: 0;
