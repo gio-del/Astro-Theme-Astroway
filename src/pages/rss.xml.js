@@ -1,8 +1,8 @@
 import rss from '@astrojs/rss';
 import sanitizeHtml from 'sanitize-html';
 
-export function GET(context) {
-    const postImportResult = import.meta.glob('../posts/**/*.md', { eager: true });
+export function GET(context) { // TODO: fix this
+    const postImportResult = import.meta.glob('./*.md', { eager: true });
     const posts = Object.values(postImportResult);
     return rss({
         title: 'Portfolio',

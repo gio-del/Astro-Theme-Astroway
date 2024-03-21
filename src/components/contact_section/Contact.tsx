@@ -33,6 +33,12 @@ export default function Contact({ contact, size }: ContactProps) {
       link: contact.twitter,
       link_alt: "Twitter",
     },
+    {
+      name: "rss",
+      icon: "fas fa-rss",
+      link: "/rss.xml",
+      link_alt: "RSS Feed",
+    },
   ];
 
   return (

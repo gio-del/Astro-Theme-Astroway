@@ -28,12 +28,8 @@ export default function Search({ posts }: any) {
   // handle keyboard navigation
   useEffect(() => {
     const handleKeyboard = (e: KeyboardEvent) => {
-      if (e.key === "F") {
-        e.preventDefault();
-        setSearch(true);
-      }
-
       if (!search) return;
+
       if (e.key === "Escape") {
         e.preventDefault();
         setSearch(false);
@@ -88,7 +84,7 @@ export default function Search({ posts }: any) {
             type="search"
             id="default-search"
             className="block w-full p-4 ps-10 rounded-lg text-text dark:text-dk-text bg-primary dark:bg-dk-primary focus:outline-none ring-2 focus:ring-accent dark:focus:ring-dk-accent focus:ring-opacity-50 ring-secondary dark:ring-dk-secondary"
-            placeholder="Search ('/' to focus, '&uarr;' and '&darr;' to navigate, 'Esc' to close, 'Enter' to select)"
+            placeholder="Search ('&uarr;' and '&darr;' to navigate, 'Esc' to close, 'Enter' to select)"
             autoFocus
             aria-label="Input search query"
             onChange={(e) => query(e.target.value)}
