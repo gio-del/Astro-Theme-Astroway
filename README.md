@@ -23,12 +23,13 @@
 - Responsive design
 - Easy to customize and extend personal data
 - Fuzzy search for blog posts
+- SEO friendly (robots.txt, sitemap.xml)
 
 ## 1.3. What's next?
 
 - [ ] Post list pagination
 - [ ] Internationalization (i18n)
-- [ ] RSS feed and sitemap
+- [ ] RSS feed
 - Feel free to open an issue or submit a pull request with your ideas for improving this portfolio template.
 
 ## 1.4. How do I modify my personal info?
@@ -86,9 +87,7 @@ Inside of this portfolio template, you will find the following files and directo
 │   ├── pages
 │   │   ├── index.astro
 │   │   ├── posts
-│   │   │   ├── heap_exploitation.md
-│   │   │   ├── post1.md
-│   │   │   └── post2.md
+│   │   │   └── your-post-title.md
 │   │   └── posts.astro
 │   └── styles
 │       └── global.css

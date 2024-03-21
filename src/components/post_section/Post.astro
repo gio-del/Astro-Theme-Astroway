@@ -15,7 +15,7 @@ const { title, description, img_path, img_alt, date } = post.frontmatter;
       img_path && (
         <a href={url}>
           <Image
-            class="rounded-md w-full md:h-48 h-28 object-cover"
+            class="rounded-md w-full md:h-56 h-28 object-cover"
             src={img_path}
             alt={img_alt || title}
             width={300}
@@ -36,7 +36,7 @@ const { title, description, img_path, img_alt, date } = post.frontmatter;
         </h5>
       </a>
 
-      <p class="antialiased text-text dark:text-dk-text text-sm break-all">
+      <p class="antialiased text-text dark:text-dk-text text-sm break-keep">
         {description}
       </p>
       <div class="flex items-center justify-between mt-4">

@@ -1,6 +1,6 @@
 ---
 title: "Buffer Overflow"
-date: "2024-01-01"
+date: "2024-01-15"
 
 layout: ../../layouts/PostLayout.astro
 description: "Learn how to exploit buffer overflows in this post!"

@@ -6,6 +6,11 @@ import Modal from "react-modal";
 export default function Search({ posts }: any) {
   const [search, setSearch] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
+  const [selected, setSelected] = useState(0);
+
+  useEffect(() => {
+    Modal.setAppElement("body");
+  }, []);
 
   const fuse = new Fuse(posts, {
     keys: ["frontmatter.title", "frontmatter.description"],
@@ -20,8 +25,54 @@ export default function Search({ posts }: any) {
     setSearchResults(res);
   };
 
+  // handle keyboard navigation
+  useEffect(() => {
+    const handleKeyboard = (e: KeyboardEvent) => {
+      if (e.key === "F") {
+        e.preventDefault();
+        setSearch(true);
+      }
+
+      if (!search) return;
+      if (e.key === "Escape") {
+        e.preventDefault();
+        setSearch(false);
+      } else if (e.key === "ArrowDown") {
+        e.preventDefault();
+        if (selected < searchResults.length - 1) {
+          setSelected(selected + 1);
+        } else {
+          setSelected(0);
+        }
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        if (selected > 0) {
+          setSelected(selected - 1);
+        } else {
+          setSelected(searchResults.length - 1);
+        }
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        window.location = searchResults[selected].item.url;
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyboard);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyboard);
+    };
+  });
+
   return (
     <div className="self-center">
+      <button onClick={() => setSearch(true)} aria-label="Search">
+        <i
+          className="fa fa-search self-center hover:text-accent dark:hover:text-dk-accent text-2xl"
+          onClick={() => setSearch(true)}
+        ></i>
+      </button>
+
       <Modal
         isOpen={search}
         onRequestClose={() => setSearch(false)}
@@ -37,27 +88,41 @@ export default function Search({ posts }: any) {
             type="search"
             id="default-search"
             className="block w-full p-4 ps-10 rounded-lg text-text dark:text-dk-text bg-primary dark:bg-dk-primary focus:outline-none ring-2 focus:ring-accent dark:focus:ring-dk-accent focus:ring-opacity-50 ring-secondary dark:ring-dk-secondary"
-            placeholder="Search"
-            required
+            placeholder="Search ('/' to focus, '&uarr;' and '&darr;' to navigate, 'Esc' to close, 'Enter' to select)"
+            autoFocus
+            aria-label="Input search query"
             onChange={(e) => query(e.target.value)}
           />
         </div>
         <div className="flex flex-col space-y-4 mt-4">
-          {searchResults.map((result, index) => (
-            <a
-              href={result.item.url}
-              key={index}
-              className="text-2xl font-semibold text-text dark:text-dk-text"
-            >
-              {result.item.frontmatter.title}
-            </a>
-          ))}
+          {/* List of search results, ensure keyboard navigation */}
+          <ul className="flex flex-col space-y-2">
+            {searchResults.map((result: any, index: number) => (
+              <li
+                key={result.item.frontmatter.title}
+                className="p-2 rounded-lg cursor-pointer flex flex-row justify-between items-center"
+                onMouseEnter={() => setSelected(index)}
+              >
+                <a
+                  href={result.item.url}
+                  className="block"
+                  onClick={() => setSearch(false)}
+                >
+                  <h3 className="text-xl font-bold text-text dark:text-dk-text">
+                    {result.item.frontmatter.title}
+                  </h3>
+                  <p className="text-text dark:text-dk-text">
+                    {result.item.frontmatter.description}
+                  </p>
+                </a>
+                {selected === index && (
+                  <i className="fa fa-arrow-left text-accent dark:text-dk-accent text-2xl"></i>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
       </Modal>
-      <i
-        className="fa fa-search self-center cursor-pointer hover:text-accent dark:hover:text-dk-accent text-2xl"
-        onClick={() => setSearch(true)}
-      ></i>
     </div>
   );
 }
