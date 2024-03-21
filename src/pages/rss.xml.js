@@ -1,16 +1,19 @@
 import rss from '@astrojs/rss';
 import sanitizeHtml from 'sanitize-html';
 
-export function GET(context) { // TODO: fix this
-    const postImportResult = import.meta.glob('./*.md', { eager: true });
+export async function GET(context) {
+    const postImportResult = import.meta.glob('./**/*.md', { eager: true });
     const posts = Object.values(postImportResult);
+
     return rss({
-        title: 'Portfolio',
-        description: 'A portfolio template built with Astro',
+        title: 'Buzz’s Blog',
+        description: 'A humble Astronaut’s guide to the stars',
         site: context.site,
         items: posts.map((post) => ({
             link: post.url,
+            pubDate: post.frontmatter.date,
             content: sanitizeHtml(post.compiledContent()),
+            title: post.frontmatter.title,
             ...post.frontmatter,
         })),
     });
