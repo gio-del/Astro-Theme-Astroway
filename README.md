@@ -24,12 +24,11 @@
 - Easy to customize and extend personal data
 - Fuzzy search for blog posts
 - SEO friendly (robots.txt, sitemap.xml)
+- RSS feed
 
 ## 1.3. What's next?
 
-- [ ] Post list pagination
 - [ ] Internationalization (i18n)
-- [ ] RSS feed
 - Feel free to open an issue or submit a pull request with your ideas for improving this portfolio template.
 
 ## 1.4. How do I modify my personal info?
