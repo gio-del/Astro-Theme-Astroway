@@ -12,9 +12,20 @@ import "../styles/global.css";
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta
+      name="description"
+      content="A portfolio website for a software developer"
+    />
+    <meta name="keywords" content="portfolio, software, developer" />
+    <meta name="author" content="Your Name" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Your Site's Title"
+      href={`${Astro.site}rss.xml`}
+    />
     <meta name="generator" content={Astro.generator} />
     <script type="text/javascript">
       (function () {
