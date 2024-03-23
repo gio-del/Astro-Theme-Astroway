@@ -8,14 +8,17 @@
 - [1. Astro Portfolio Template](#1-astro-portfolio-template)
   - [1.1. Table of Contents](#11-table-of-contents)
   - [1.2. Features :open\_hands:](#12-features-open_hands)
-  - [1.3. What's next?](#13-whats-next)
-  - [1.4. How do I modify my personal info?](#14-how-do-i-modify-my-personal-info)
+  - [1.3. What's next? :rocket:](#13-whats-next-rocket)
+  - [1.4. How to use this template :toolbox:](#14-how-to-use-this-template-toolbox)
+    - [1.4.1. Notes about the contact section :email:](#141-notes-about-the-contact-section-email)
+    - [1.4.2. Notes about RSS feed :newspaper:](#142-notes-about-rss-feed-newspaper)
+    - [1.4.3. Notes about SEO :robot:](#143-notes-about-seo-robot)
+    - [1.4.4. Notes about styles :art:](#144-notes-about-styles-art)
   - [1.5. Project Structure :rocket:](#15-project-structure-rocket)
   - [1.6. Commands :genie\_man:](#16-commands-genie_man)
   - [1.7. Tools Used :hammer\_and\_wrench:](#17-tools-used-hammer_and_wrench)
-  - [1.8. Styling :art:](#18-styling-art)
-  - [1.9. Contributing :building\_construction:](#19-contributing-building_construction)
-  - [1.10. License :memo:](#110-license-memo)
+  - [1.8. Contributing :building\_construction:](#18-contributing-building_construction)
+  - [1.9. License :memo:](#19-license-memo)
 
 ## 1.2. Features :open_hands:
 
@@ -26,20 +29,43 @@
 - SEO friendly (robots.txt, sitemap.xml)
 - RSS feed
 
-## 1.3. What's next?
+## 1.3. What's next? :rocket:
 
 - [ ] Internationalization (i18n)
-- Feel free to open an issue or submit a pull request with your ideas for improving this portfolio template.
+- [ ] Projects collection
+- Feel free to open an issue or submit a pull request with your ideas for improving this portfolio template (see [Contributing](#18-contributing-building_construction))
 
-## 1.4. How do I modify my personal info?
+## 1.4. How to use this template :toolbox:
 
-To modify the personal data shown in the portfolio template, you need to update the [`info.ts`](src/data/info.ts) file located in the `src/data` directory.
+Note: this mini-guide assumes you have `npm` installed on your machine, if you don't, you can download it following the instructions [here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-Open the `info.ts` file, and you will find an object with properties representing different sections of your portfolio, such as `name`, `title`, `about`, `education`, `experience`, and more.
+1. Click on the "Use this template" button at the top of the repository.
+2. Create a new repository based on this template.
+3. Clone the repository to your local machine.
+4. Install the dependencies by running `npm install`
+5. You can now start the development server by running `npm run dev` (see this [section](#16-commands-genie_man) for more commands)
+6. Now you can start customizing the portfolio template by updating the `/data/info.ts` file with your personal information.
 
-Update the values of these properties with your own personal information. You can also add or remove properties as needed.
+### 1.4.1. Notes about the contact section :email:
 
-Once you have made the necessary changes, save the file and the portfolio template will reflect the updated personal data.
+If you add/remove something from the contact section in the `info.ts` file, you will need to update the `Contact.tsx` file located in the `src/components/contact_section` directory by simply reflecting the changes you made in the `info.ts` file. Although, this choice may seem redundant, it allows to separate the data from the view.
+
+### 1.4.2. Notes about RSS feed :newspaper:
+
+The RSS feed is generated using the `astro-plugin-feed` plugin.
+
+To customize it:
+
+1. Update the `site` entry in the `astro.config.mjs` file with your site url.
+2. Modify the `rss.xml.js` file located in the `pages` directory to reflect your site's information.
+
+### 1.4.3. Notes about SEO :robot:
+
+Modify the head section of the `BaseLayout.astro` file located in the `src/layouts` directory to reflect your site's information.
+
+### 1.4.4. Notes about styles :art:
+
+This portfolio template uses Tailwind CSS for styling. You can modify the colors used in the portfolio by updating the `tailwind.config.js` file located in the root of the project.
 
 ## 1.5. Project Structure :rocket:
 
@@ -118,11 +144,7 @@ This portfolio template uses the following tools/libraries/resources:
 - [TypeScript](https://www.typescriptlang.org/)
 - [Fuse.js](https://fusejs.io/)
 
-## 1.8. Styling :art:
-
-This portfolio template uses Tailwind CSS for styling. You can modify the colors used in the portfolio by updating the `tailwind.config.js` file located in the root of the project.
-
-## 1.9. Contributing :building_construction:
+## 1.8. Contributing :building_construction:
 
 If you would like to contribute to the Astro Portfolio Template, follow these steps:
 
@@ -134,6 +156,8 @@ If you would like to contribute to the Astro Portfolio Template, follow these st
 
 Thank you very much for your contributions!
 
-## 1.10. License :memo:
+See the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
+
+## 1.9. License :memo:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
