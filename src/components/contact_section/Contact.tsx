@@ -58,6 +58,7 @@ export default function Contact({ contact, size }: ContactProps) {
             "text-secondary dark:text-dk-secondary hover:text-accent dark:hover:text-dk-accent " +
             (size === "md" ? "text-3xl lg:text-4xl" : "text-5xl lg:text-9xl")
           }
+          aria-label={socialMedia.link_alt}
         >
           <i className={socialMedia.icon}></i>
         </a>
