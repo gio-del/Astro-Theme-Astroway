@@ -16,21 +16,6 @@ export const info = {
     I'm a team player and I'm always looking for ways to improve my skills.`,
     education: [
       {
-        title: "Preschool",
-        date: "1998 - 2000",
-        location: "New York Preschool",
-      },
-      {
-        title: "Elementary School",
-        date: "2000 - 2006",
-        location: "New York Elementary School",
-      },
-      {
-        title: "High School Diploma",
-        date: "2006 - 2010",
-        location: "New York High School",
-      },
-      {
         title: "Bachelor of Computer Science",
         date: "2010 - 2014",
         location: "University of New York",
@@ -44,24 +29,11 @@ export const info = {
         gpa: "3.9",
         thesis: "A more in-depth survey about portfolio websites",
       },
-      {
-        title: "PhD in Computer Science",
-        date: "2016 - 2018",
-        location: "Massachusetts Institute of Technology",
-        thesis: "A comprehensive survey about portfolio websites",
-      },
     ],
     experience: [
       {
-        title: "Full Stack Developer",
-        date: "2018 - Present",
-        location: "ABC Company",
-        description:
-          "Developed and maintained web applications using React, Node.js, and MongoDB.",
-      },
-      {
         title: "Frontend Developer",
-        date: "2016 - 2018",
+        date: "2016 - Present",
         location: "XYZ Company",
         description:
           "Built and maintained web applications using React and Redux.",

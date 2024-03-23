@@ -44,24 +44,22 @@ export default function Contact({ contact, size }: ContactProps) {
   return (
     <div
       className={
-        "flex  justify-center items-center border-t-2 border-b-2 border-secondary dark:border-dk-secondary hover:border-accent dark:hover:border-dk-accent  " +
-        (size === "md"
-          ? "lg:text-3xl text-4xl space-x-12 lg:space-x-12 py-2"
-          : "lg:text-9xl text-5xl space-x-12 lg:space-x-20  py-10")
+        "flex flex-row items-center container " +
+        (size === "md" ? "justify-between" : "justify-evenly")
       }
-      aria-label="Contact Information"
     >
-      {socialMediaLinks.map((link) => (
+      {socialMediaLinks.map((socialMedia, index) => (
         <a
-          href={link.link}
+          key={index}
+          href={socialMedia.link}
+          target="_blank"
           rel="noreferrer"
-          key={link.name}
-          className="text-secondary dark:text-dk-secondary"
-          aria-label={link.link_alt}
+          className={
+            "text-secondary dark:text-dk-secondary hover:text-accent dark:hover:text-dk-accent " +
+            (size === "md" ? "text-3xl lg:text-4xl" : "text-5xl lg:text-9xl")
+          }
         >
-          <i
-            className={`${link.icon} hover:text-accent dark:hover:text-dk-accent`}
-          ></i>
+          <i className={socialMedia.icon}></i>
         </a>
       ))}
     </div>

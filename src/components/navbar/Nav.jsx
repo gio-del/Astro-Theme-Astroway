@@ -4,7 +4,7 @@ import Search from "../search/Search";
 import Hamburger from "./Hamburger";
 import { info } from "../../data/info";
 
-export default function NavBar({ posts }) {
+export default function Nav({ posts, absolute }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const navLinks = [
@@ -39,7 +39,12 @@ export default function NavBar({ posts }) {
   }, [isNavOpen]);
 
   return (
-    <nav className="w-full top-0 inset-x-0 dark:bg-dk-primary bg-primary z-50">
+    <nav
+      className={
+        "w-full top-0 inset-x-0 dark:bg-dk-primary bg-primary z-50" +
+        (absolute ? " absolute" : "")
+      }
+    >
       <div className="w-full px-6 py-2 flex justify-between items-center">
         <a className="font-bold text-2xl lg:text-4xl" href="/#">
           <span className="text-secondary dark:text-dk-secondary">

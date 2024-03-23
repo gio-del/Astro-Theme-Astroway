@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* TODO: use tailwind extension class to refactor the whole styling of the portfolio */
-
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -17,9 +15,10 @@ html {
   scrollbar-color: theme(colors.secondary) theme(colors.primary);
 }
 
-html.dark * {
-  scrollbar-color: theme(colors.dk-secondary) theme(colors.dk-primary) !important;
+html.dark {
+  scrollbar-color: theme(colors.dk-secondary) theme(colors.dk-primary);
 }
+
 h1 {
   margin: 0;
   padding: 0;
@@ -36,6 +35,26 @@ h2 {
   color: theme(colors.secondary);
 }
 
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  color: theme(colors.secondary);
+}
+
+h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: theme(colors.secondary);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
 h2,
 p {
   color: theme(colors.text);
@@ -45,6 +64,11 @@ html.dark h1 {
 }
 
 html.dark h2,
+html.dark h3,
+html.dark h4 {
+  color: theme(colors.dk-secondary);
+}
+
 html.dark p {
   color: theme(colors.dk-text);
 }
@@ -71,4 +95,19 @@ html.dark p {
   to {
     opacity: 1;
   }
+}
+
+/* Inline code style */
+/* If inline: do not contain any child "span" elements */
+code:not(:only-child) {
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  font-size: 90%;
+}
+
+/* Style for multiline code inside <pre> */
+pre code {
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  font-size: 90%;
 }

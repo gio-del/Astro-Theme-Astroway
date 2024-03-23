@@ -91,7 +91,6 @@ export default function Search({ posts }: any) {
           />
         </div>
         <div className="flex flex-col space-y-4 mt-4">
-          {/* List of search results, ensure keyboard navigation */}
           <ul className="flex flex-col space-y-2">
             {searchResults.map((result: any, index: number) => (
               <li

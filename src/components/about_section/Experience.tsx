@@ -10,7 +10,7 @@ export default function Experience(props: ExperienceProps) {
   return experience.length == 0 ? (
     <div></div>
   ) : (
-    <div className="flex flex-col space-y-4 w-full lg:w-1/2 mx-4">
+    <div className="flex flex-col space-y-4 w-full lg:w-1/2 mx-4 container break-keep">
       <h1 className="text-3xl font-bold">Job Experience</h1>
       {experience.map((exp, index) => (
         <div className="flex flex-col space-y-2 relative" key={index}>

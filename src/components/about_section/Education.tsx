@@ -11,7 +11,7 @@ export default function Education(props: EducationProps) {
   return education.length == 0 ? (
     <div></div>
   ) : (
-    <div className="flex flex-col space-y-4 w-full lg:w-1/2 mx-4">
+    <div className="flex flex-col space-y-4 w-full lg:w-1/2 mx-4 container break-keep">
       <h1 className="text-3xl font-bold">Education</h1>
       {education.map((edu, index) => (
         <div className="flex flex-col space-y-2 relative" key={index}>
