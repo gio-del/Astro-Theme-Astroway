@@ -29,7 +29,10 @@ const recentPosts = posts
           <p class="text-gray-600 dark:text-gray-400">
             {post.frontmatter.date}
           </p>
-          <a class="text-secondary dark:text-dk-secondary" href={post.url}>
+          <a
+            class="text-secondary dark:text-dk-secondary hover:text-accent dark:hover:text-dk-accent"
+            href={post.url}
+          >
             Read more &rarr;
           </a>
           <div class="border-t border-gray-200 dark:border-dk-gray-800 my-8" />
@@ -37,7 +40,9 @@ const recentPosts = posts
       ))
     }
     <div class="text-right mt-4 text-secondary dark:text-dk-secondary">
-      <a href="/posts">Read more posts</a>
+      <a class="hover:text-accent dark:hover:text-dk-accent" href="/posts">
+        Read more posts</a
+      >
     </div>
   </div>
 </div>
