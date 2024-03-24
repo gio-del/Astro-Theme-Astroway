@@ -4,14 +4,14 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'primary': '#F8F8F8',
-				'secondary': '#095F33',
-				'accent': '#101010',
-				'text': '#101010',
-				'dk-primary': '#101010',
-				'dk-secondary': '#4FFF43',
-				'dk-accent': '#FBFF00',
-				'dk-text': '#F8F8F8',
+				'primary': '#FEFBF6',
+				'secondary': '#8CB9BD',
+				'accent': '#ECB159',
+				'text': '#B67352',
+				'dk-primary': '#0C2432',
+				'dk-secondary': '#0499E4',
+				'dk-accent': '#55C2C3',
+				'dk-text': '#7E8C9C',
 			},
 		},
 	},

@@ -11,7 +11,7 @@ import { Image } from "astro:assets";
 const allPosts = await Astro.glob("./posts/*.md");
 ---
 
-<BaseLayout title="Home" navbarAbsolute>
+<BaseLayout title="Home">
   <section class="lg:h-screen lg:m-0 my-20 mx-2" id="home">
     <div
       class="flex flex-col lg:flex-row justify-center items-center h-full space-y-4"
@@ -21,18 +21,18 @@ const allPosts = await Astro.glob("./posts/*.md");
         alt={info.picture_alt}
         width={200}
         height={200}
-        class="lg:h-96 lg:w-96 h-40 w-40 rounded-full object-cover object-center space-x-8"
+        class="lg:h-96 lg:w-96 h-40 w-40 rounded-full object-fill object-center space-x-8"
       />
       <div class="flex flex-col lg:mx-8 leading-relaxed space-y-4">
-        <h1>
+        <h1 class="text-3xl lg:text-5xl font-bold font-serif">
           Hi, I'm <span
             class="bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-blue-500 dark:from-green-400 dark:to-blue-400"
           >
             {info.name}</span
           >
         </h1>
-        <h2>{info.brief_description}</h2>
-        <p class="text-lg">
+        <h2 class="text-text dark:text-dk-text">{info.brief_description}</h2>
+        <p class="text-2xl">
           Based in <span class="text-secondary dark:text-dk-secondary"
             >{info.location}</span
           >
