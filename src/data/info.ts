@@ -1,116 +1,92 @@
 export const info = {
-  name: "John Doe",
+  name: "Bart Simpson",
   brief_description:
-    "I'm a full stack developer with a passion for web development.",
+    "I'm a mischievous full stack developer with a knack for troublemaking.",
   role: "Full Stack Developer",
-  picture: "/pic.jpg",
-  picture_alt: "American Dad",
-  location: "New York, USA",
-  cv: "/Resume.pdf", // Make sure the file is in the public folder or modify the path/name
+  picture: "/pic.png",
+  picture_alt: "Bart Simpson",
+  location: "Springfield, USA",
+  cv: "/resume.pdf",
 
   about: {
-    description: `I'm a full stack developer with a passion for web development.
-    I have a strong foundation in computer science and I'm always eager to learn new technologies.
-    I have experience in building web applications using React, Node.js, and MongoDB.
-    I'm also familiar with TypeScript and GraphQL.
-    I'm a team player and I'm always looking for ways to improve my skills.`,
+    description: `I'm a full stack developer with a passion for causing a little chaos in web development.
+    I have a solid foundation in computer science, although I prefer skateboarding over studying.
+    I excel in building web applications using React, Node.js, and MongoDB.
+    I'm known for my sharp wit and quick thinking, traits that serve me well in coding and pranks alike.
+    Looking for a challenge? Let's create something memorable together.`,
     education: [
       {
-        title: "Bachelor of Computer Science",
-        date: "2010 - 2014",
-        location: "University of New York",
-        gpa: "3.8",
-        thesis: "A survey about portfolio websites",
-      },
-      {
-        title: "Master of Computer Science",
-        date: "2014 - 2016",
-        location: "University of New York",
-        gpa: "3.9",
-        thesis: "A more in-depth survey about portfolio websites",
+        title: "Self-Taught Developer Extraordinaire",
+        date: "2000 - Present",
+        location: "Springfield Elementary School of Hard Knocks",
+        gpa: "4.0 (A+ in Pranks)",
+        thesis: "The Art of Subverting Expectations: A Practical Guide",
       },
     ],
     experience: [
       {
         title: "Frontend Developer",
-        date: "2016 - Present",
-        location: "XYZ Company",
+        date: "2015 - Present",
+        location: "Krusty Burger Web Dev",
         description:
-          "Built and maintained web applications using React and Redux.",
+          "Crafted interactive web experiences using React and Redux. Often multitasked between coding and avoiding Principal Skinner.",
       },
       {
-        title: "Software Engineer",
-        date: "2014 - 2016",
-        location: "DEF Company",
-        description: "Worked on various projects using Java, C++, and Python.",
+        title: "Backend Bandit",
+        date: "2013 - 2015",
+        location: "Comic Book Guy's Software Emporium",
+        description:
+          "Masterminded backend solutions using Node.js and MongoDB. Surprisingly good at debugging, considering my history of causing bugs.",
       },
       {
-        title: "Intern",
-        date: "2013 - 2014",
-        location: "GHI Company",
+        title: "Junior Hacker",
+        date: "2010 - 2013",
+        location: "Springfield Elementary Cyber Club",
         description:
-          "Assisted with various tasks and learned about software development.",
+          "Pioneered early web exploits, leading the club in daring coding escapades. Was disciplined for hacking the school's grading system.",
       },
     ],
 
-    skills: ["JavaScript", "TypeScript"],
+    skills: ["JavaScript", "React", "Node.js", "MongoDB", "Prank Mastery"], // not used yet
   },
 
   projects: [
     {
-      title: "Portfolio Website",
-      date: "2021",
+      title: "Bart's Prank Portfolio",
+      date: "2024",
       description:
-        "A personal portfolio website built with Next.js and TypeScript.",
-      link: "https://www.github.com",
-      tech: ["Next.js", "TypeScript"],
-      img_alt: "Insert alt text here", // Add an alt text for the image
-      img_path: "https://source.unsplash.com/random/?portfolio", // Modify the path to your own image in the public folder
+        "An interactive portfolio website showcasing my mischievous coding projects. Don't worry, it won't cause detention.",
+      link: "https://github.com/bartsimpsonfake/prank-portfolio",
+      tech: ["React", "Node.js", "MongoDB", "Sarcasm.js"],
+      img_alt: "Bart's Portfolio",
+      img_path: "https://source.unsplash.com/800x600/?simpsons",
     },
     {
-      title: "E-commerce Website",
-      date: "2020",
+      title: "Skateboard Shop",
+      date: "2023",
       description:
-        "An e-commerce website built with React, Node.js, and MongoDB.",
-      link: "https://www.github.com",
-      tech: ["React", "Node.js", "MongoDB"],
-      img_alt: "Insert alt text here",
-      img_path: "https://source.unsplash.com/random/?ecommerce",
+        "An e-commerce site selling skateboards and prank supplies. No bullies allowed!",
+      link: "https://github.com/bartsimpsonfake/skate-shop",
+      tech: ["React", "Node.js", "MongoDB", "Skateboard.js"],
+      img_alt: "Skateboard Shop",
+      img_path: "https://source.unsplash.com/800x600/?skateboard",
     },
     {
-      title: "Blog Website",
-      date: "2019",
-      description: "A blog website built with Gatsby and GraphQL.",
-      link: "https://www.github.com",
-      tech: ["Gatsby", "GraphQL"],
-      img_alt: "Insert alt text here",
-      img_path: "https://source.unsplash.com/random/?blog",
-    },
-    {
-      title: "Social Media App",
-      date: "2018",
-      description: "A social media app built with React and Redux.",
-      link: "https://www.github.com",
-      tech: ["React", "Redux"],
-      img_alt: "Insert alt text here",
-      img_path: "https://source.unsplash.com/random/?socialmedia",
-    },
-    {
-      title: "Todo App",
-      date: "2017",
-      description: "A todo app built with Angular and Firebase.",
-      link: "https://www.github.com",
-      tech: ["Angular", "Firebase"],
-      img_alt: "Insert alt text here",
-      img_path: "https://source.unsplash.com/random/?todo",
+      title: "Comic Book Club",
+      date: "2022",
+      description:
+        "A platform for comic book enthusiasts to discuss and share their collections.",
+      link: "https://github.com/bartsimpsonfake/comic-club",
+      tech: ["React", "Node.js", "MongoDB", "Comic.js"],
+      img_alt: "Comic Book Club",
+      img_path: "https://source.unsplash.com/800x600/?comics",
     },
   ],
 
   contact: {
-    email: "john.doe@notsofake.com",
-    linkedin: "https://www.linkedin.com/in/veryfakenamethatisnotreal",
-    github: "https://www.github.com/veryfakenamethatisnotreal",
-    twitter: "https://www.twitter.com/veryfakenamethatisnotreal",
-    // Add or remove social media links, then update the Contact.tsx component accordingly
+    email: "bart@thesimpsons.com",
+    linkedin: "https://www.linkedin.com/in/bartsimpsonfake",
+    github: "https://www.github.com/bartsimpsonfake",
+    twitter: "https://www.twitter.com/bartsimpsonfake",
   },
 };
