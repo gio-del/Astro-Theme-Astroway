@@ -39,6 +39,7 @@ export default function DarkModeUtility() {
       });
     window.dispatchEvent(new Event("storage"));
     setTheme(window.localStorage.getItem("theme"));
+    window.dispatchEvent(new Event("themechange"));
   };
 
   return (
