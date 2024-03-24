@@ -12,10 +12,6 @@ export default function Pointer() {
   ]);
 
   useEffect(() => {
-    console.log(themeColor);
-  }, [themeColor]);
-
-  useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     let particles = [];

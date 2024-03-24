@@ -9,7 +9,6 @@ export function useThemeColor(colors) {
 
     // Function to handle theme change
     const handleThemeChange = () => {
-      console.log(colors);
       if (html.classList.contains("dark")) {
         setThemeColor(colors[0]); // Dark mode color
       } else {
