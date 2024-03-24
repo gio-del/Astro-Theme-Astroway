@@ -55,7 +55,7 @@ export const info = {
       title: "Bart's Prank Portfolio",
       date: "2024",
       description:
-        "An interactive portfolio website showcasing my mischievous coding projects. Don't worry, it won't cause detention.",
+        "An interactive portfolio website showcasing my mischievous coding projects.",
       link: "https://github.com/bartsimpsonfake/prank-portfolio",
       tech: ["React", "Node.js", "MongoDB", "Sarcasm.js"],
       img_alt: "Bart's Portfolio",
