@@ -111,3 +111,13 @@ pre code {
   font-family: Consolas, Monaco, "Andale Mono", monospace;
   font-size: 90%;
 }
+
+pre:has(code) {
+  padding: 1em;
+  border-radius: 5px;
+  background-color: theme(colors.dk-primary) !important;
+}
+
+html.dark pre:has(code) {
+  background-color: theme(colors.dk-primary) !important;
+}
