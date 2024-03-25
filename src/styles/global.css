@@ -73,6 +73,16 @@ html.dark p {
   color: theme(colors.dk-text);
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
+* {
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+}
+
 * {
   transition: background-color 0.75s,
     color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -88,6 +98,16 @@ html.dark p {
     color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+*::selection {
+  background-color: theme(colors.secondary) !important;
+  color: theme(colors.primary) !important;
+}
+
+html.dark *::selection {
+  background-color: theme(colors.dk-secondary) !important;
+  color: theme(colors.dk-primary) !important;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -97,8 +117,6 @@ html.dark p {
   }
 }
 
-/* Inline code style */
-/* If inline: do not contain any child "span" elements */
 code:not(:only-child) {
   padding: 0.1em 0.3em;
   border-radius: 3px;
@@ -106,7 +124,6 @@ code:not(:only-child) {
   font-size: 90%;
 }
 
-/* Style for multiline code inside <pre> */
 pre code {
   font-family: Consolas, Monaco, "Andale Mono", monospace;
   font-size: 90%;
@@ -114,10 +131,9 @@ pre code {
 
 pre:has(code) {
   padding: 1em;
-  border-radius: 5px;
-  background-color: theme(colors.dk-primary) !important;
-}
-
-html.dark pre:has(code) {
-  background-color: theme(colors.dk-primary) !important;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }

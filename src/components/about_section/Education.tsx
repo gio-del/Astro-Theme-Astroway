@@ -1,8 +1,8 @@
-import React from "react"; // Add the missing import statement for React
-import { info } from "../../data/info"; // Import the info object from the data/info file
+import React from "react";
+import { info } from "../../data/info";
 
 interface EducationProps {
-  education: (typeof info)["about"]["education"]; // Create an interface for the props
+  education: (typeof info)["about"]["education"];
 }
 
 export default function Education(props: EducationProps) {
@@ -11,7 +11,7 @@ export default function Education(props: EducationProps) {
   return education.length == 0 ? (
     <div></div>
   ) : (
-    <div className="flex flex-col space-y-4 w-full lg:w-1/2 mx-4 container break-keep">
+    <div className="flex flex-col space-y-4 lg:w-1/2 mx-4">
       <h1 className="text-3xl font-bold">Education</h1>
       {education.map((edu, index) => (
         <div className="flex flex-col space-y-2 relative" key={index}>
@@ -19,7 +19,7 @@ export default function Education(props: EducationProps) {
             <i className="fas fa-graduation-cap text-2xl text-secondary dark:text-dk-secondary dark:hover:text-dk-accent hover:text-accent z-10"></i>
             <h2 className="text-xl font-semibold">{edu.title}</h2>
           </div>
-          <div className="relative left-10">
+          <div className="relative left-10 w-full">
             <p className="text-xl font-normal">{edu.date}</p>
             <p className="text-xl font-normal">{edu.location}</p>
             {edu.gpa && <p className="text-xl font-normal">GPA: {edu.gpa}</p>}

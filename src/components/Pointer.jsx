@@ -19,10 +19,12 @@ export default function Pointer() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    window.addEventListener("resize", () => {
+    const onResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-    });
+    };
+
+    window.addEventListener("resize", onResize);
 
     const mouse = {
       x: undefined,
@@ -31,12 +33,21 @@ export default function Pointer() {
       last_y: undefined,
     };
 
-    window.addEventListener("mousemove", (e) => {
+    const onMouseMove = (e) => {
       mouse.last_x = mouse.x;
       mouse.last_y = mouse.y;
       mouse.x = e.x;
       mouse.y = e.y;
-    });
+    };
+
+    const onMouseOut = () => {
+      mouse.x = mouse.last_x;
+      mouse.y = mouse.last_y;
+    };
+
+    document.addEventListener("mousemove", onMouseMove);
+
+    document.addEventListener("mouseout", onMouseOut);
 
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -59,6 +70,8 @@ export default function Pointer() {
       spread: 10,
       life: 20,
       interval: 1,
+      threshold: 3,
+      derivative_ratio: 10,
     };
 
     const random = (min, max) => Math.random() * (max - min) + min;
@@ -72,11 +85,21 @@ export default function Pointer() {
       const color = themeColor;
       const life = particlesConfig.life;
       const spread = particlesConfig.spread;
+      const threshold = particlesConfig.threshold;
+      const derivative_ratio = particlesConfig.derivative_ratio;
+
+      if (
+        Math.abs(mouse.x - mouse.last_x) < threshold &&
+        Math.abs(mouse.y - mouse.last_y) < threshold
+      ) {
+        setTimeout(createParticle, particlesConfig.interval);
+        return;
+      }
 
       if (mouse.last_x && mouse.last_y) {
         // Derivative of mouse position
-        vx = (mouse.x - mouse.last_x) / 10;
-        vy = (mouse.y - mouse.last_y) / 10;
+        vx = (mouse.x - mouse.last_x) / derivative_ratio;
+        vy = (mouse.y - mouse.last_y) / derivative_ratio;
       }
 
       particles.push(
@@ -91,15 +114,9 @@ export default function Pointer() {
     createParticle();
 
     return () => {
-      window.removeEventListener("resize", () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      });
-
-      window.removeEventListener("mousemove", (e) => {
-        mouse.x = e.x;
-        mouse.y = e.y;
-      });
+      window.removeEventListener("resize", onResize);
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mouseout", onMouseOut);
 
       // Clear particles when unmounting
       particles = [];
@@ -109,7 +126,7 @@ export default function Pointer() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full pointer-events-none z-50 hidden sm:block"
+      className="fixed top-0 left-0 w-full h-full pointer-events-none z-50 hidden md:block"
     ></canvas>
   );
 }
