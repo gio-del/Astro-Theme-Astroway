@@ -12,7 +12,7 @@ export default function Experience(props: ExperienceProps) {
     <div></div>
   ) : (
     <div className="flex flex-col space-y-4 lg:w-1/2 mx-4">
-      <h1 className="text-3xl font-bold">Education</h1>
+      <h1 className="text-3xl font-bold">Experience</h1>
       {experience.map((exp, index) => (
         <div className="flex flex-col space-y-2 relative" key={index}>
           <div className="flex items-center space-x-2">

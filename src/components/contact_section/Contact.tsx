@@ -44,8 +44,7 @@ export default function Contact({ contact, size }: ContactProps) {
   return (
     <div
       className={
-        "flex flex-row items-center container " +
-        (size === "md" ? "justify-between" : "justify-evenly")
+        "flex flex-row items-center container justify-around"
       }
     >
       {socialMediaLinks.map((socialMedia, index) => (

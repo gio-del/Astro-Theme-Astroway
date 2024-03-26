@@ -25,7 +25,7 @@ export default function Nav({ posts }) {
 
   return (
     <>
-      <nav className="w-full top-0 inset-x-0 dark:bg-dk-primary bg-primary z-50 absolute">
+      <nav className="container mx-auto top-0 z-50 absolute bg-primary dark:bg-dk-primary">
         <div className="w-full px-6 py-2 flex justify-between items-center">
           <a className="font-bold text-2xl lg:text-4xl" href="/#">
             <span className="text-secondary dark:text-dk-secondary">

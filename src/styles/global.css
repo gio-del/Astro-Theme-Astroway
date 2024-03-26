@@ -83,57 +83,12 @@ body {
   word-wrap: break-word !important;
 }
 
-* {
-  transition: background-color 0.75s,
-    color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
-  animation: fadeIn 0.75s;
-  -webkit-animation: fadeIn 0.75s;
-  -webkit-transition: background-color 0.75s,
-    color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -moz-transition: background-color 0.75s,
-    color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -ms-transition: background-color 0.75s,
-    color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -o-transition: background-color 0.75s,
-    color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
 *::selection {
-  background-color: theme(colors.secondary) !important;
+  background-color: theme(colors.text) !important;
   color: theme(colors.primary) !important;
 }
 
 html.dark *::selection {
-  background-color: theme(colors.dk-secondary) !important;
+  background-color: theme(colors.dk-text) !important;
   color: theme(colors.dk-primary) !important;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-code:not(:only-child) {
-  padding: 0.1em 0.3em;
-  border-radius: 3px;
-  font-family: Consolas, Monaco, "Andale Mono", monospace;
-  font-size: 90%;
-}
-
-pre code {
-  font-family: Consolas, Monaco, "Andale Mono", monospace;
-  font-size: 90%;
-}
-
-pre:has(code) {
-  padding: 1em;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
 }

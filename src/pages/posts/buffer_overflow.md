@@ -11,7 +11,11 @@ img_alt : "Insert image description here"
 
 ## Fancy way to exploit the buffer
 
-Have you ever heard of buffer overflows? They are a common vulnerability in software that can be exploited to gain unauthorized access to a system. In this post, we will explore how buffer overflows work and how they can be exploited.
+Have you ever heard of buffer overflows?[^1] They are a common vulnerability in software that can be exploited to gain unauthorized access to a system. In this post, we will explore how ``buffer overflows`` work and how they can be exploited.
+
+### What is a buffer overflow?
+
+That is so important! 🆘
 
 ```c
 #include <stdio.h>
@@ -36,4 +40,18 @@ To exploit this vulnerability, we can craft an input string that contains shellc
 
 ## Conclusion
 
-Buffer overflows are a common vulnerability that can be exploited to gain unauthorized access to a system. By understanding how buffer overflows work and how they can be exploited, developers can better protect their software from these types of attacks. It is important to follow secure coding practices and use tools like static analysis and fuzz testing to identify and fix buffer overflow vulnerabilities in software.
+> A man once said, "With great power comes great responsibility." - Uncle Ben
+
+You should:
+
+1. Understand how buffer overflows work
+2. Follow secure coding practices
+3. Use tools like static analysis and fuzz testing to identify and fix buffer overflow vulnerabilities in software
+
+To understand more about buffer overflows, you can check out the following resources.
+
+- [Buffer Overflow Attack](https://en.wikipedia.org/wiki/Buffer_overflow)
+- [Buffer Overflow Exploitation](https://owasp.org/www-community/attacks/Buffer_Overflow)
+- [Buffer Overflow Prevention](https://www.owasp.org/index.php/Buffer_Overflow)
+
+[^1]: Probably yes, if you are reading this post.
