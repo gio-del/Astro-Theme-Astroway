@@ -59,7 +59,7 @@ export const info = {
       link: "https://github.com/bartsimpsonfake/prank-portfolio",
       tech: ["React", "Node.js", "MongoDB", "Sarcasm.js"],
       img_alt: "Bart's Portfolio",
-      img_path: "https://source.unsplash.com/800x600/?simpsons",
+      img_path: "/simpsons.png",
     },
     {
       title: "Skateboard Shop",
@@ -69,7 +69,7 @@ export const info = {
       link: "https://github.com/bartsimpsonfake/skate-shop",
       tech: ["React", "Node.js", "MongoDB", "Skateboard.js"],
       img_alt: "Skateboard Shop",
-      img_path: "https://source.unsplash.com/800x600/?skateboard",
+      img_path: "skateboard.png",
     },
     {
       title: "Comic Book Club",
@@ -79,7 +79,7 @@ export const info = {
       link: "https://github.com/bartsimpsonfake/comic-club",
       tech: ["React", "Node.js", "MongoDB", "Comic.js"],
       img_alt: "Comic Book Club",
-      img_path: "https://source.unsplash.com/800x600/?comics",
+      img_path: "comics.png",
     },
   ],
 

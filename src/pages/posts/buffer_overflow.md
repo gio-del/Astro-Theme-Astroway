@@ -5,7 +5,7 @@ date: "2024-01-15"
 layout: ../../layouts/PostLayout.astro
 description: "Learn how to exploit buffer overflows in this post!"
 
-img_path : "https://source.unsplash.com/random/?overflow/800x600"
+img_path : "/buffer_overflow.png"
 img_alt : "Insert image description here"
 ---
 

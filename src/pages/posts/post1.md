@@ -5,7 +5,7 @@ date: "2022-01-01"
 layout: ../../layouts/PostLayout.astro
 description: "This is my first Astro post. Stay tuned for more exciting content coming soon!"
 
-img_path : "https://source.unsplash.com/random/?paper/800x600"
+img_path : "/paper.png"
 img_alt: "Insert image description here"
 ---
 
