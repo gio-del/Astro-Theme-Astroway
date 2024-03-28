@@ -81,6 +81,11 @@ body {
 * {
   overflow-wrap: break-word !important;
   word-wrap: break-word !important;
+  transition: color 0.25s linear;
+  -webkit-transition: color 0.25s linear;
+  -moz-transition: color 0.25s linear;
+  -ms-transition: color 0.25s linear;
+  -o-transition: color 0.25s linear;
 }
 
 *::selection {
