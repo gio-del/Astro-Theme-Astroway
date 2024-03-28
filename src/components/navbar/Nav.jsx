@@ -37,7 +37,7 @@ export default function Nav({ posts }) {
           <a
             href={info.cv}
             download
-            className="px-4 py-2 border-2 rounded text-secondary dark:text-dk-secondary border-secondary dark:border-dk-secondary hover:bg-secondary dark:hover:bg-dk-secondary hover:text-primary dark:hover:text-primary transition duration-300 ease-in-out cursor-pointer absolute left-1/2 transform -translate-x-1/2"
+            className="px-4 py-2 border-2 rounded text-secondary dark:text-dk-secondary border-secondary dark:border-dk-secondary hover:bg-secondary dark:hover:bg-dk-secondary hover:text-primary dark:hover:text-primary cursor-pointer absolute left-1/2 transform -translate-x-1/2"
           >
             <i className="fas fa-download mr-2"></i>
             <span className="hidden lg:inline-block font-medium">
