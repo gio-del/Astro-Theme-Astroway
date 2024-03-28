@@ -126,7 +126,7 @@ export default function Pointer() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full pointer-events-none z-50 hidden md:block"
+      className="fixed top-0 left-0 w-full h-full pointer-events-none z-50 hidden md:block not-sr-only"
     ></canvas>
   );
 }
