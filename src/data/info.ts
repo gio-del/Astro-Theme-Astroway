@@ -86,7 +86,7 @@ export const info = {
   contact: {
     email: "bart@thesimpsons.com",
     linkedin: "https://www.linkedin.com/in/bartsimpsonfake",
-    github: "https://www.github.com/bartsimpsonfake",
+    github: "https://www.github.com/gio-del",
     twitter: "https://www.twitter.com/bartsimpsonfake",
   },
 };
