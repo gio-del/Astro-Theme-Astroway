@@ -13,6 +13,7 @@ html {
 
 * {
   scrollbar-color: theme(colors.secondary) theme(colors.primary);
+  scrollbar-width: thin;
 }
 
 html.dark {
