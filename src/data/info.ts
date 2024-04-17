@@ -1,5 +1,5 @@
 export const info = {
-  name: "Bart Simpson",
+  name: "Oussama Khaled",
   brief_description:
     "I'm a mischievous full stack developer with a knack for troublemaking.",
   role: "Full Stack Developer",
