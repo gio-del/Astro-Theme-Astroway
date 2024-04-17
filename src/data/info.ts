@@ -4,8 +4,8 @@ export const info = {
     "I'm a mischievous full stack developer with a knack for troublemaking.",
   role: "Full Stack Developer",
   picture: "/pic.png",
-  picture_alt: "Bart Simpson",
-  location: "Springfield, USA",
+  picture_alt: "Oussama Khaled",
+  location: "Tunisia",
   cv: "/resume.pdf",
 
   about: {
